@@ -42,20 +42,23 @@ TABLE OF CONTENTS
 =========================================================================
 *                          HDL Parsing                                  *
 =========================================================================
+Analyzing Verilog file "/home/ivan/work02-captura-datos-0v7670-grupo-06/hdl/flip_flopD_bajada.v" into library work
+Parsing module <flip_flopD_bajada>.
+Analyzing Verilog file "/home/ivan/work02-captura-datos-0v7670-grupo-06/hdl/flip_flopD.v" into library work
+Parsing module <flip_flopD>.
 Analyzing Verilog file "/home/ivan/work02-captura-datos-0v7670-grupo-06/hdl/captura_de_datos.v" into library work
 Parsing module <captura_de_datos>.
-WARNING:HDLCompiler:370 - "/home/ivan/work02-captura-datos-0v7670-grupo-06/hdl/captura_de_datos.v" Line 21: Empty port in module declaration
 
 
 Total REAL time to Xst completion: 5.00 secs
-Total CPU time to Xst completion: 4.52 secs
+Total CPU time to Xst completion: 4.56 secs
  
 --> 
 
 
-Total memory usage is 297272 kilobytes
+Total memory usage is 297452 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :    1 (   0 filtered)
+Number of warnings :    0 (   0 filtered)
 Number of infos    :    0 (   0 filtered)
 

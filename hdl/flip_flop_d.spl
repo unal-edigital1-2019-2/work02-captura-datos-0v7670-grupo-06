@@ -1,0 +1,11 @@
+[Inputs]
+D
+pl
+Reset
+[Outputs]
+Q
+Qbar
+[BiDir]
+[ATTRIBUTES]
+VeriModel flip_flop_d
+

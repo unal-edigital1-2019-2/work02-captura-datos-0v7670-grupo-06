@@ -5,17 +5,17 @@ Parameter TMPDIR set to /home/ivan/work02-captura-datos-0v7670-grupo-06/hdl/xst/
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.05 secs
+Total CPU time to Xst completion: 0.06 secs
  
 --> 
 Parameter xsthdpdir set to /home/ivan/work02-captura-datos-0v7670-grupo-06/hdl/xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.05 secs
+Total CPU time to Xst completion: 0.06 secs
  
 --> 
-Reading design: flip_flop_d.prj
+Reading design: flip_flopD.prj
 
 TABLE OF CONTENTS
   1) Synthesis Options Summary
@@ -42,17 +42,17 @@ TABLE OF CONTENTS
 =========================================================================
 *                          HDL Parsing                                  *
 =========================================================================
-Analyzing Verilog file "/home/ivan/work02-captura-datos-0v7670-grupo-06/hdl/flip_flop_d.v" into library work
-Parsing module <flip_flop_d>.
+Analyzing Verilog file "/home/ivan/work02-captura-datos-0v7670-grupo-06/hdl/flip_flopD.v" into library work
+Parsing module <flip_flopD>.
 
 
 Total REAL time to Xst completion: 5.00 secs
-Total CPU time to Xst completion: 4.87 secs
+Total CPU time to Xst completion: 4.32 secs
  
 --> 
 
 
-Total memory usage is 297268 kilobytes
+Total memory usage is 297272 kilobytes
 
 Number of errors   :    0 (   0 filtered)
 Number of warnings :    0 (   0 filtered)

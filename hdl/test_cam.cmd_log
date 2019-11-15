@@ -4,3 +4,4 @@ map -intstyle ise -p xc6slx9-tqg144-3 -w -logic_opt off -ol high -t 1 -xt 0 -reg
 netgen -intstyle ise -insert_glbl true -w -dir netgen/synthesis -ofmt verilog -sim test_cam.ngc test_cam_synthesis.v 
 xst -intstyle ise -ifn "/home/ivan/work02-captura-datos-0v7670-grupo-06/hdl/test_cam.xst" -ofn "/home/ivan/work02-captura-datos-0v7670-grupo-06/hdl/test_cam.syr" 
 xst -intstyle ise -ifn "/home/ivan/work02-captura-datos-0v7670-grupo-06/hdl/test_cam.xst" -ofn "/home/ivan/work02-captura-datos-0v7670-grupo-06/hdl/test_cam.syr" 
+xst -intstyle ise -ifn "/home/ivan/work02-captura-datos-0v7670-grupo-06/hdl/test_cam.xst" -ofn "/home/ivan/work02-captura-datos-0v7670-grupo-06/hdl/test_cam.syr" 

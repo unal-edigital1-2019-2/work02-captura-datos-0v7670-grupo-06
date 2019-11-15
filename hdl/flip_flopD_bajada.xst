@@ -1,11 +1,8 @@
-set -tmpdir "xst/projnav.tmp"
-set -xsthdpdir "xst"
-run
--ifn test_cam.prj
--ofn test_cam
--ofmt NGC
+set -tmpdir "/home/ivan/work02-captura-datos-0v7670-grupo-06/hdl/xst/projnav.tmp"
+set -xsthdpdir "/home/ivan/work02-captura-datos-0v7670-grupo-06/hdl/xst"
+run -compileonly yes
 -p xc6slx9-3-tqg144
--top test_cam
+-top flip_flopD_bajada
 -opt_mode Speed
 -opt_level 1
 -power NO
@@ -50,3 +47,4 @@ run
 -iob Auto
 -equivalent_register_removal YES
 -slice_utilization_ratio_maxmargin 5
+-ifn flip_flopD_bajada.prj

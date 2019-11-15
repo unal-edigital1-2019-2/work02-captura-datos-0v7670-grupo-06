@@ -1,1 +1,3 @@
+verilog work "flip_flopD_bajada.v"
+verilog work "flip_flopD.v"
 verilog work "captura_de_datos.v"

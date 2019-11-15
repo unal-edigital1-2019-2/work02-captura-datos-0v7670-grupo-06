@@ -18,14 +18,26 @@
 // Additional Comments: 
 //
 //////////////////////////////////////////////////////////////////////////////////
-module captura_de_datos(VSYNC,HREF,HSYNC,a,);
-input VSYNC,HREF,HSYNC,a;//declaracion
+module captura_de_datos(VSYNC,HREF,HSYNC,b,c,m);
+input VSYNC,HREF,HSYNC,b,c;//declaracion
 reg color [7:0];
-
-always @(posedge VSYNC) 
-begin
-//always @(posedge HSYNC)
-//begin 
+//output    a;
+output m;
+//assign d=a;
+wire w0,w1,w2,w3;
+//initial count = 0;
+//always @ (posedge clk) begin
+ //   count <= count + 1'b1;
 //end
-end
+
+flip_flopD m2 (.D(b), .Q(w0), .pl(VSYNC),.async_reset(c));
+flip_flopD m3 (.D(w0), .Q(w1), .pl(HSYNC),.async_reset(w3));
+flip_flopD m4 (.D(w1), .Q(w2), .pl(HREF),.async_reset(w3));
+flip_flopD_bajada m5 (.D(w2), .Q(w3), .pl(HREF),.async_reset(w3));
+assign m=w3;
+
+
+
+
+
 endmodule

@@ -18,15 +18,15 @@
 // Additional Comments: 
 //
 //////////////////////////////////////////////////////////////////////////////////
-module flip_flop_d(Q, D, pl,Reset, Qbar);
+module flip_flop_d(Q, D, pl,Reset);
 
     output  reg  Q=0;
 
-    output   Qbar; 
+  //  output   Qbar; 
 
     input   D, pl, Reset; 
 
-    assign Qbar = ~Q; 
+  //  assign Qbar = ~Q; 
 
 
 always @(posedge pl) 
