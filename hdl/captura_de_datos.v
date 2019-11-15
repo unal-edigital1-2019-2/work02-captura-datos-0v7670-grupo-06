@@ -18,8 +18,14 @@
 // Additional Comments: 
 //
 //////////////////////////////////////////////////////////////////////////////////
-module captura_de_datos(VSYNC,HREF,HSYNC,a,
-    );
-output VSYNC,HREF,HSYNC,a;//declaracion
+module captura_de_datos(VSYNC,HREF,HSYNC,a,);
+input VSYNC,HREF,HSYNC,a;//declaracion
 reg color [7:0];
+
+always @(posedge VSYNC) 
+begin
+//always @(posedge HSYNC)
+//begin 
+//end
+end
 endmodule

@@ -34,6 +34,9 @@
     <file xil_pn:fileType="FILE_XST_STX" xil_pn:name="clk_32MHZ_to_25M_24M.stx"/>
     <file xil_pn:fileType="FILE_SYMBOL" xil_pn:name="clk_32MHZ_to_25M_24M.sym" xil_pn:origination="imported"/>
     <file xil_pn:fileType="FILE_XST" xil_pn:name="clk_32MHZ_to_25M_24M.xst"/>
+    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="flip_flop_d.prj"/>
+    <file xil_pn:fileType="FILE_XST_STX" xil_pn:name="flip_flop_d.stx"/>
+    <file xil_pn:fileType="FILE_XST" xil_pn:name="flip_flop_d.xst"/>
     <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="netgen"/>
     <file xil_pn:fileType="FILE_NETGEN_REPORT" xil_pn:name="netgen/synthesis/test_cam_synthesis.nlf"/>
     <file xil_pn:fileType="FILE_VERILOG" xil_pn:name="netgen/synthesis/test_cam_synthesis.v"/>
@@ -62,7 +65,7 @@
   </files>
 
   <transforms xmlns="http://www.xilinx.com/XMLSchema">
-    <transform xil_pn:end_ts="1573768221" xil_pn:name="TRANEXT_compLibraries_FPGA" xil_pn:prop_ck="-3594876569575637225" xil_pn:start_ts="1573768221">
+    <transform xil_pn:end_ts="1573826964" xil_pn:name="TRANEXT_compLibraries_FPGA" xil_pn:prop_ck="-3594876569575637225" xil_pn:start_ts="1573826964">
       <status xil_pn:value="FailedRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
@@ -100,6 +103,7 @@
       <status xil_pn:value="ReadyToRun"/>
       <status xil_pn:value="OutOfDateForInputs"/>
       <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="InputAdded"/>
       <status xil_pn:value="InputChanged"/>
       <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="_xmsgs/xst.xmsgs"/>
