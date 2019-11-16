@@ -5,14 +5,14 @@ Parameter TMPDIR set to xst/projnav.tmp
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.07 secs
+Total CPU time to Xst completion: 0.04 secs
  
 --> 
 Parameter xsthdpdir set to xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.07 secs
+Total CPU time to Xst completion: 0.04 secs
  
 --> 
 Reading design: test_cam.prj
@@ -108,19 +108,19 @@ Slice Utilization Ratio Delta      : 5
 =========================================================================
 *                          HDL Parsing                                  *
 =========================================================================
-Analyzing Verilog file "/home/ivan/work02-captura-datos-0v7670-grupo-06/hdl/src/VGA_driver.v" into library work
+Analyzing Verilog file "/home/juan/Documentos/GitHub/work02-captura-datos-0v7670-grupo-06/hdl/src/VGA_driver.v" into library work
 Parsing module <VGA_Driver640x480>.
-Analyzing Verilog file "/home/ivan/work02-captura-datos-0v7670-grupo-06/hdl/src/PLL/clk_32MHZ_to_25M_24M.v" into library work
+Analyzing Verilog file "/home/juan/Documentos/GitHub/work02-captura-datos-0v7670-grupo-06/hdl/src/PLL/clk_32MHZ_to_25M_24M.v" into library work
 Parsing module <clk_32MHZ_to_25M_24M>.
-Analyzing Verilog file "/home/ivan/work02-captura-datos-0v7670-grupo-06/hdl/src/buffer_ram_dp.v" into library work
+Analyzing Verilog file "/home/juan/Documentos/GitHub/work02-captura-datos-0v7670-grupo-06/hdl/src/buffer_ram_dp.v" into library work
 Parsing module <buffer_ram_dp>.
-Analyzing Verilog file "/home/ivan/work02-captura-datos-0v7670-grupo-06/hdl/src/test_cam.v" into library work
+Analyzing Verilog file "/home/juan/Documentos/GitHub/work02-captura-datos-0v7670-grupo-06/hdl/src/test_cam.v" into library work
 Parsing module <test_cam>.
 
 =========================================================================
 *                            HDL Elaboration                            *
 =========================================================================
-WARNING:HDLCompiler:1016 - "/home/ivan/work02-captura-datos-0v7670-grupo-06/hdl/src/test_cam.v" Line 102: Port LOCKED is not connected to this instance
+WARNING:HDLCompiler:1016 - "/home/juan/Documentos/GitHub/work02-captura-datos-0v7670-grupo-06/hdl/src/test_cam.v" Line 102: Port LOCKED is not connected to this instance
 
 Elaborating module <test_cam>.
 
@@ -128,33 +128,44 @@ Elaborating module <clk_32MHZ_to_25M_24M>.
 
 Elaborating module <BUFG>.
 
-Elaborating module <PLL_BASE(BANDWIDTH="OPTIMIZED",CLK_FEEDBACK="CLKFBOUT",COMPENSATION="SYSTEM_SYNCHRONOUS",DIVCLK_DIVIDE=1,CLKFBOUT_MULT=25,CLKFBOUT_PHASE=0.0,CLKOUT0_DIVIDE=32,CLKOUT0_PHASE=0.0,CLKOUT0_DUTY_CYCLE=0.5,CLKOUT1_DIVIDE=33,CLKOUT1_PHASE=0.0,CLKOUT1_DUTY_CYCLE=0.5,CLKIN_PERIOD=31.25,REF_JITTER=0.01)>.
-WARNING:HDLCompiler:1127 - "/home/ivan/work02-captura-datos-0v7670-grupo-06/hdl/src/PLL/clk_32MHZ_to_25M_24M.v" Line 121: Assignment to clkout2_unused ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "/home/ivan/work02-captura-datos-0v7670-grupo-06/hdl/src/PLL/clk_32MHZ_to_25M_24M.v" Line 122: Assignment to clkout3_unused ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "/home/ivan/work02-captura-datos-0v7670-grupo-06/hdl/src/PLL/clk_32MHZ_to_25M_24M.v" Line 123: Assignment to clkout4_unused ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "/home/ivan/work02-captura-datos-0v7670-grupo-06/hdl/src/PLL/clk_32MHZ_to_25M_24M.v" Line 124: Assignment to clkout5_unused ignored, since the identifier is never used
+Elaborating module <MMCME2_ADV(BANDWIDTH="OPTIMIZED",CLKOUT4_CASCADE="FALSE",COMPENSATION="ZHOLD",STARTUP_WAIT="FALSE",DIVCLK_DIVIDE=1,CLKFBOUT_MULT_F=12.0,CLKFBOUT_PHASE=0.0,CLKFBOUT_USE_FINE_PS="FALSE",CLKOUT0_DIVIDE_F=48.0,CLKOUT0_PHASE=0.0,CLKOUT0_DUTY_CYCLE=0.5,CLKOUT0_USE_FINE_PS="FALSE",CLKOUT1_DIVIDE=50,CLKOUT1_PHASE=0.0,CLKOUT1_DUTY_CYCLE=0.5,CLKOUT1_USE_FINE_PS="FALSE",CLKIN1_PERIOD=10.0,REF_JITTER1=0.01)>.
+WARNING:HDLCompiler:1127 - "/home/juan/Documentos/GitHub/work02-captura-datos-0v7670-grupo-06/hdl/src/PLL/clk_32MHZ_to_25M_24M.v" Line 132: Assignment to clkfboutb_unused ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/juan/Documentos/GitHub/work02-captura-datos-0v7670-grupo-06/hdl/src/PLL/clk_32MHZ_to_25M_24M.v" Line 134: Assignment to clkout0b_unused ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/juan/Documentos/GitHub/work02-captura-datos-0v7670-grupo-06/hdl/src/PLL/clk_32MHZ_to_25M_24M.v" Line 136: Assignment to clkout1b_unused ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/juan/Documentos/GitHub/work02-captura-datos-0v7670-grupo-06/hdl/src/PLL/clk_32MHZ_to_25M_24M.v" Line 137: Assignment to clkout2_unused ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/juan/Documentos/GitHub/work02-captura-datos-0v7670-grupo-06/hdl/src/PLL/clk_32MHZ_to_25M_24M.v" Line 138: Assignment to clkout2b_unused ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/juan/Documentos/GitHub/work02-captura-datos-0v7670-grupo-06/hdl/src/PLL/clk_32MHZ_to_25M_24M.v" Line 139: Assignment to clkout3_unused ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/juan/Documentos/GitHub/work02-captura-datos-0v7670-grupo-06/hdl/src/PLL/clk_32MHZ_to_25M_24M.v" Line 140: Assignment to clkout3b_unused ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/juan/Documentos/GitHub/work02-captura-datos-0v7670-grupo-06/hdl/src/PLL/clk_32MHZ_to_25M_24M.v" Line 141: Assignment to clkout4_unused ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/juan/Documentos/GitHub/work02-captura-datos-0v7670-grupo-06/hdl/src/PLL/clk_32MHZ_to_25M_24M.v" Line 142: Assignment to clkout5_unused ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/juan/Documentos/GitHub/work02-captura-datos-0v7670-grupo-06/hdl/src/PLL/clk_32MHZ_to_25M_24M.v" Line 143: Assignment to clkout6_unused ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/juan/Documentos/GitHub/work02-captura-datos-0v7670-grupo-06/hdl/src/PLL/clk_32MHZ_to_25M_24M.v" Line 155: Assignment to do_unused ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/juan/Documentos/GitHub/work02-captura-datos-0v7670-grupo-06/hdl/src/PLL/clk_32MHZ_to_25M_24M.v" Line 156: Assignment to drdy_unused ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/juan/Documentos/GitHub/work02-captura-datos-0v7670-grupo-06/hdl/src/PLL/clk_32MHZ_to_25M_24M.v" Line 162: Assignment to psdone_unused ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/juan/Documentos/GitHub/work02-captura-datos-0v7670-grupo-06/hdl/src/PLL/clk_32MHZ_to_25M_24M.v" Line 165: Assignment to clkinstopped_unused ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/juan/Documentos/GitHub/work02-captura-datos-0v7670-grupo-06/hdl/src/PLL/clk_32MHZ_to_25M_24M.v" Line 166: Assignment to clkfbstopped_unused ignored, since the identifier is never used
 
 Elaborating module <buffer_ram_dp(AW=15,DW=8)>.
 Reading initialization file \"src/image.men\".
-WARNING:HDLCompiler:1670 - "/home/ivan/work02-captura-datos-0v7670-grupo-06/hdl/src/buffer_ram_dp.v" Line 53: Signal <ram> in initial block is partially initialized.
+WARNING:HDLCompiler:1670 - "/home/juan/Documentos/GitHub/work02-captura-datos-0v7670-grupo-06/hdl/src/buffer_ram_dp.v" Line 53: Signal <ram> in initial block is partially initialized.
 
 Elaborating module <VGA_Driver640x480>.
-WARNING:HDLCompiler:413 - "/home/ivan/work02-captura-datos-0v7670-grupo-06/hdl/src/VGA_driver.v" Line 68: Result of 10-bit expression is truncated to fit in 9-bit target.
-WARNING:HDLCompiler:413 - "/home/ivan/work02-captura-datos-0v7670-grupo-06/hdl/src/VGA_driver.v" Line 72: Result of 11-bit expression is truncated to fit in 10-bit target.
-WARNING:HDLCompiler:413 - "/home/ivan/work02-captura-datos-0v7670-grupo-06/hdl/src/test_cam.v" Line 155: Result of 17-bit expression is truncated to fit in 15-bit target.
-WARNING:HDLCompiler:634 - "/home/ivan/work02-captura-datos-0v7670-grupo-06/hdl/src/test_cam.v" Line 61: Net <DP_RAM_addr_in[14]> does not have a driver.
-WARNING:HDLCompiler:634 - "/home/ivan/work02-captura-datos-0v7670-grupo-06/hdl/src/test_cam.v" Line 62: Net <DP_RAM_data_in[7]> does not have a driver.
-WARNING:HDLCompiler:634 - "/home/ivan/work02-captura-datos-0v7670-grupo-06/hdl/src/test_cam.v" Line 63: Net <DP_RAM_regW> does not have a driver.
+WARNING:HDLCompiler:413 - "/home/juan/Documentos/GitHub/work02-captura-datos-0v7670-grupo-06/hdl/src/VGA_driver.v" Line 68: Result of 10-bit expression is truncated to fit in 9-bit target.
+WARNING:HDLCompiler:413 - "/home/juan/Documentos/GitHub/work02-captura-datos-0v7670-grupo-06/hdl/src/VGA_driver.v" Line 72: Result of 11-bit expression is truncated to fit in 10-bit target.
+WARNING:HDLCompiler:413 - "/home/juan/Documentos/GitHub/work02-captura-datos-0v7670-grupo-06/hdl/src/test_cam.v" Line 155: Result of 17-bit expression is truncated to fit in 15-bit target.
+WARNING:HDLCompiler:634 - "/home/juan/Documentos/GitHub/work02-captura-datos-0v7670-grupo-06/hdl/src/test_cam.v" Line 61: Net <DP_RAM_addr_in[14]> does not have a driver.
+WARNING:HDLCompiler:634 - "/home/juan/Documentos/GitHub/work02-captura-datos-0v7670-grupo-06/hdl/src/test_cam.v" Line 62: Net <DP_RAM_data_in[7]> does not have a driver.
+WARNING:HDLCompiler:634 - "/home/juan/Documentos/GitHub/work02-captura-datos-0v7670-grupo-06/hdl/src/test_cam.v" Line 63: Net <DP_RAM_regW> does not have a driver.
 
 =========================================================================
 *                           HDL Synthesis                               *
 =========================================================================
 
 Synthesizing Unit <test_cam>.
-    Related source file is "/home/ivan/work02-captura-datos-0v7670-grupo-06/hdl/src/test_cam.v".
+    Related source file is "/home/juan/Documentos/GitHub/work02-captura-datos-0v7670-grupo-06/hdl/src/test_cam.v".
         CAM_SCREEN_X = 160
         CAM_SCREEN_Y = 120
-INFO:Xst:3210 - "/home/ivan/work02-captura-datos-0v7670-grupo-06/hdl/src/test_cam.v" line 103: Output port <LOCKED> of the instance <clk25_24> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/juan/Documentos/GitHub/work02-captura-datos-0v7670-grupo-06/hdl/src/test_cam.v" line 103: Output port <LOCKED> of the instance <clk25_24> is unconnected or connected to loadless signal.
 WARNING:Xst:653 - Signal <DP_RAM_addr_in> is used but never assigned. This sourceless signal will be automatically connected to value GND.
 WARNING:Xst:653 - Signal <DP_RAM_data_in> is used but never assigned. This sourceless signal will be automatically connected to value GND.
 WARNING:Xst:653 - Signal <DP_RAM_regW> is used but never assigned. This sourceless signal will be automatically connected to value GND.
@@ -170,13 +181,13 @@ WARNING:Xst:653 - Signal <DP_RAM_regW> is used but never assigned. This sourcele
 Unit <test_cam> synthesized.
 
 Synthesizing Unit <clk_32MHZ_to_25M_24M>.
-    Related source file is "/home/ivan/work02-captura-datos-0v7670-grupo-06/hdl/src/PLL/clk_32MHZ_to_25M_24M.v".
+    Related source file is "/home/juan/Documentos/GitHub/work02-captura-datos-0v7670-grupo-06/hdl/src/PLL/clk_32MHZ_to_25M_24M.v".
     Summary:
 	no macro.
 Unit <clk_32MHZ_to_25M_24M> synthesized.
 
 Synthesizing Unit <buffer_ram_dp>.
-    Related source file is "/home/ivan/work02-captura-datos-0v7670-grupo-06/hdl/src/buffer_ram_dp.v".
+    Related source file is "/home/juan/Documentos/GitHub/work02-captura-datos-0v7670-grupo-06/hdl/src/buffer_ram_dp.v".
         AW = 15
         DW = 8
         imageFILE = "src/image.men"
@@ -188,7 +199,7 @@ Synthesizing Unit <buffer_ram_dp>.
 Unit <buffer_ram_dp> synthesized.
 
 Synthesizing Unit <VGA_Driver640x480>.
-    Related source file is "/home/ivan/work02-captura-datos-0v7670-grupo-06/hdl/src/VGA_driver.v".
+    Related source file is "/home/juan/Documentos/GitHub/work02-captura-datos-0v7670-grupo-06/hdl/src/VGA_driver.v".
     Found 9-bit register for signal <countY>.
     Found 10-bit register for signal <countX>.
     Found 9-bit adder for signal <countY[8]_GND_6_o_add_10_OUT> created at line 68.
@@ -298,7 +309,6 @@ Macro Statistics
 =========================================================================
 *                         Low Level Synthesis                           *
 =========================================================================
-INFO:Xst:1901 - Instance clk25_24/pll_base_inst in unit clk25_24/pll_base_inst of type PLL_BASE has been replaced by PLL_ADV
 
 Optimizing unit <test_cam> ...
 
@@ -377,7 +387,7 @@ Primitive and Black Box Usage:
 # DSPs                             : 1
 #      DSP48A1                     : 1
 # Others                           : 1
-#      PLL_ADV                     : 1
+#      MMCME2_ADV                  : 1
 
 Device utilization summary:
 ---------------------------
@@ -406,7 +416,6 @@ Specific Feature Utilization:
     Number using Block RAM only:          3
  Number of BUFG/BUFGCTRLs:                4  out of     16    25%  
  Number of DSP48A1s:                      1  out of     16     6%  
- Number of PLL_ADVs:                      1  out of      2    50%  
 
 ---------------------------
 Partition Resource Summary:
@@ -429,7 +438,7 @@ Clock Information:
 -----------------------------------+------------------------+-------+
 Clock Signal                       | Clock buffer(FF name)  | Load  |
 -----------------------------------+------------------------+-------+
-clk25_24/pll_base_inst/CLKOUT0     | BUFG                   | 24    |
+clk25_24/clkout0                   | BUFG                   | 24    |
 clk                                | IBUFG                  | 3     |
 -----------------------------------+------------------------+-------+
 
@@ -444,22 +453,22 @@ Speed Grade: -3
    Minimum period: 7.309ns (Maximum Frequency: 136.824MHz)
    Minimum input arrival time before clock: 3.698ns
    Maximum output required time after clock: 6.358ns
-   Maximum combinational path delay: No path found
+   Maximum combinational path delay: 2.078ns
 
 Timing Details:
 ---------------
 All values displayed in nanoseconds (ns)
 
 =========================================================================
-Timing constraint: Default period analysis for Clock 'clk25_24/pll_base_inst/CLKOUT0'
+Timing constraint: Default period analysis for Clock 'clk25_24/clkout0'
   Clock period: 7.309ns (frequency: 136.824MHz)
   Total number of paths / destination ports: 1258 / 92
 -------------------------------------------------------------------------
 Delay:               7.309ns (Levels of Logic = 2)
   Source:            VGA640x480/countY_8 (FF)
   Destination:       DP_RAM/Mram_ram2 (RAM)
-  Source Clock:      clk25_24/pll_base_inst/CLKOUT0 rising
-  Destination Clock: clk25_24/pll_base_inst/CLKOUT0 rising
+  Source Clock:      clk25_24/clkout0 rising
+  Destination Clock: clk25_24/clkout0 rising
 
   Data Path: VGA640x480/countY_8 to DP_RAM/Mram_ram2
                                 Gate     Net
@@ -474,13 +483,13 @@ Delay:               7.309ns (Levels of Logic = 2)
                                        (73.8% logic, 26.2% route)
 
 =========================================================================
-Timing constraint: Default OFFSET IN BEFORE for Clock 'clk25_24/pll_base_inst/CLKOUT0'
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk25_24/clkout0'
   Total number of paths / destination ports: 20 / 20
 -------------------------------------------------------------------------
 Offset:              3.698ns (Levels of Logic = 2)
   Source:            rst (PAD)
   Destination:       VGA640x480/countX_0 (FF)
-  Destination Clock: clk25_24/pll_base_inst/CLKOUT0 rising
+  Destination Clock: clk25_24/clkout0 rising
 
   Data Path: rst to VGA640x480/countX_0
                                 Gate     Net
@@ -494,13 +503,13 @@ Offset:              3.698ns (Levels of Logic = 2)
                                        (50.2% logic, 49.8% route)
 
 =========================================================================
-Timing constraint: Default OFFSET OUT AFTER for Clock 'clk25_24/pll_base_inst/CLKOUT0'
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk25_24/clkout0'
   Total number of paths / destination ports: 62 / 10
 -------------------------------------------------------------------------
 Offset:              6.358ns (Levels of Logic = 2)
   Source:            DP_RAM/Mram_ram2 (RAM)
   Destination:       VGA_R<3> (PAD)
-  Source Clock:      clk25_24/pll_base_inst/CLKOUT0 rising
+  Source Clock:      clk25_24/clkout0 rising
 
   Data Path: DP_RAM/Mram_ram2 to VGA_R<3>
                                 Gate     Net
@@ -514,30 +523,48 @@ Offset:              6.358ns (Levels of Logic = 2)
                                        (72.7% logic, 27.3% route)
 
 =========================================================================
+Timing constraint: Default path analysis
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Delay:               2.078ns (Levels of Logic = 1)
+  Source:            rst (PAD)
+  Destination:       clk25_24/mmcm_adv_inst:RST (PAD)
+
+  Data Path: rst to clk25_24/mmcm_adv_inst:RST
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            10   1.222   0.856  rst_IBUF (rst_IBUF)
+    MMCME2_ADV:RST             0.000          clk25_24/mmcm_adv_inst
+    ----------------------------------------
+    Total                      2.078ns (1.222ns logic, 0.856ns route)
+                                       (58.8% logic, 41.2% route)
+
+=========================================================================
 
 Cross Clock Domains Report:
 --------------------------
 
-Clock to Setup on destination clock clk25_24/pll_base_inst/CLKOUT0
-------------------------------+---------+---------+---------+---------+
-                              | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
-Source Clock                  |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
-------------------------------+---------+---------+---------+---------+
-clk25_24/pll_base_inst/CLKOUT0|    7.309|         |         |         |
-------------------------------+---------+---------+---------+---------+
+Clock to Setup on destination clock clk25_24/clkout0
+----------------+---------+---------+---------+---------+
+                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock    |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+----------------+---------+---------+---------+---------+
+clk25_24/clkout0|    7.309|         |         |         |
+----------------+---------+---------+---------+---------+
 
 =========================================================================
 
 
-Total REAL time to Xst completion: 11.00 secs
-Total CPU time to Xst completion: 9.28 secs
+Total REAL time to Xst completion: 8.00 secs
+Total CPU time to Xst completion: 6.58 secs
  
 --> 
 
 
-Total memory usage is 390100 kilobytes
+Total memory usage is 384252 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :   15 (   0 filtered)
-Number of infos    :   16 (   0 filtered)
+Number of warnings :   26 (   0 filtered)
+Number of infos    :   15 (   0 filtered)
 
