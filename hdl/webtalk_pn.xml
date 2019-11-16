@@ -3,7 +3,7 @@
 <!--The data in this file is primarily intended for consumption by Xilinx tools.
 The structure and the elements are likely to change over the next few releases.
 This means code written to parse this file will need to be revisited each subsequent release.-->
-<application name="pn" timeStamp="Fri Nov 15 19:08:08 2019">
+<application name="pn" timeStamp="Fri Nov 15 19:54:21 2019">
 <section name="Project Information" visible="false">
 <property name="ProjectID" value="874A876191364FBEB39825A02CC45C05" type="project"/>
 <property name="ProjectIteration" value="0" type="project"/>
@@ -26,6 +26,7 @@ This means code written to parse this file will need to be revisited each subseq
 <property name="PROP_intWbtProjectID" value="874A876191364FBEB39825A02CC45C05" type="design"/>
 <property name="PROP_intWorkingDirLocWRTProjDir" value="Same" type="design"/>
 <property name="PROP_intWorkingDirUsed" value="No" type="design"/>
+<property name="PROP_lockPinsUcfFile" value="changed" type="process"/>
 <property name="PROP_xilxBitgStart_IntDone" value="true" type="process"/>
 <property name="PROP_AutoTop" value="false" type="design"/>
 <property name="PROP_DevFamily" value="Spartan6" type="design"/>
@@ -35,7 +36,8 @@ This means code written to parse this file will need to be revisited each subseq
 <property name="PROP_Synthesis_Tool" value="XST (VHDL/Verilog)" type="design"/>
 <property name="PROP_DevSpeed" value="-3" type="design"/>
 <property name="PROP_PreferredLanguage" value="Verilog" type="design"/>
-<property name="FILE_VERILOG" value="4" type="source"/>
+<property name="FILE_UCF" value="1" type="source"/>
+<property name="FILE_VERILOG" value="5" type="source"/>
 </section>
 </application>
 </document>
