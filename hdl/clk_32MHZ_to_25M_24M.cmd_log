@@ -1,2 +1,0 @@
-vhdtdtfi -lib work /home/ivan/work02-captura-datos-0v7670-grupo-06/hdl/src/PLL/clk_32MHZ_to_25M_24M.v -lang verilog -prj test_cam -o clk_32MHZ_to_25M_24M.spl -module clk_32MHZ_to_25M_24M -template /opt/Xilinx/14.7/ISE_DS/ISE//data/splveri.tft -deleteonerror 
-spl2sym -intstyle ise -family spartan6 clk_32MHZ_to_25M_24M.spl /home/ivan/work02-captura-datos-0v7670-grupo-06/hdl/clk_32MHZ_to_25M_24M.sym 

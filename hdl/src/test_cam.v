@@ -19,7 +19,7 @@
 //
 //////////////////////////////////////////////////////////////////////////////////
 module test_cam(
-    input wire clk,           // board clock: 100 MHz 
+    input wire clk,           // board clock: 32 MHz 
     input wire rst,         	// reset button
 
 	// VGA input/output  
@@ -28,35 +28,21 @@ module test_cam(
     output wire [3:0] VGA_R,	// 4-bit VGA red output
     output wire [3:0] VGA_G,  // 4-bit VGA green output
     output wire [3:0] VGA_B,  // 4-bit VGA blue output
-	 
-	 
+	
+	//CAMARA input/output
+	
+	output wire CAM_xclk,		// System  clock imput
+	output wire CAM_pwdn,		// power down mode 
+	output wire CAM_reset		// clear all registers of cam
 	// colocar aqui las entras  y salidas de la camara 
-	
 
-	input CPCLK,				
-	input CHREF,
-	input CVSYNC,
-	
-	output wire Cxclk,		
-	output wire Cpwdn,		
-	output wire Creset,		
-					
-					
-	input CDATA0,					
-	input CDATA1,					
-	input CDATA2,					
-	input CDATA3,					
-	input CDATA4,					
-	input CDATA5,					
-	input CDATA6,					
-	input CDATA7 					
-   );
+);
 
-// TAMANNO DE ADQUISICION DE LA CAMARA 
-parameter CAM_SCREEN_X = 320;
-parameter CAM_SCREEN_Y = 240;
+// TAMAÑO DE ADQUISICIÓN DE LA CAMARA 
+parameter CAM_SCREEN_X = 160;
+parameter CAM_SCREEN_Y = 120;
 
-localparam AW = 17; // LOG2(CAM_SCREEN_X*CAM_SCREEN_Y)
+localparam AW = 15; // LOG2(CAM_SCREEN_X*CAM_SCREEN_Y)
 localparam DW = 8;
 
 // El color es RGB 332
@@ -64,20 +50,21 @@ localparam RED_VGA =   8'b11100000;
 localparam GREEN_VGA = 8'b00011100;
 localparam BLUE_VGA =  8'b00000011;
 
+
 // Clk 
-wire clk100M;
+wire clk32M;
 wire clk25M;
 wire clk24M;
 
-// Conexion dual por ram
+// Conexión dual por ram
 
-wire [AW-1: 0] DP_RAM_addr_in;  
-wire [DW-1: 0] DP_RAM_data_in;
+wire  [AW-1: 0] DP_RAM_addr_in;  
+wire  [DW-1: 0] DP_RAM_data_in;
 wire DP_RAM_regW;
 
 reg  [AW-1: 0] DP_RAM_addr_out;  
 	
-// Conexion VGA Driver
+// Conexión VGA Driver
 wire [DW-1:0]data_mem;	   // Salida de dp_ram al driver VGA
 wire [DW-1:0]data_RGB332;  // salida del driver VGA al puerto
 wire [9:0]VGA_posX;		   // Determinar la pos de memoria que viene del VGA
@@ -92,53 +79,38 @@ assign VGA_R = {data_RGB332[7:5],1'b0};
 assign VGA_G = {data_RGB332[4:2],1'b0};
 assign VGA_B = {data_RGB332[1:0],2'b00};
 
+
+
 /* ****************************************************************************
-Asignacion de las seales de control xclk pwdn y reset de la camara 
+Asignación de las señales de control xclk pwdn y reset de la camara 
 **************************************************************************** */
 
-assign CAM_xclk = clk24M;
-assign CAM_pwdn = 0;			// power down mode 
-assign CAM_reset = 0;
+assign CAM_xclk=  clk24M;
+assign CAM_pwdn=  0;			// power down mode 
+assign CAM_reset=  0;
+
+
 
 /* ****************************************************************************
-  Este bloque se debe modificar segun sea le caso. El ejemplo esta dado para
+  Este bloque se debe modificar según sea le caso. El ejemplo esta dado para
   fpga Spartan6 lx9 a 32MHz.
   usar "tools -> Core Generator ..."  y general el ip con Clocking Wizard
   el bloque genera un reloj de 25Mhz usado para el VGA  y un relo de 24 MHz
   utilizado para la camara , a partir de una frecuencia de 32 Mhz
 **************************************************************************** */
-assign clk100M =clk;
-clk_100MHZ_to_25M_24M
-clk_100MHZ_to_25M_24M(
+//assign clk32M =clk;
+clk_32MHZ_to_25M_24M
+  clk25_24(
   .CLK_IN1(clk),
   .CLK_OUT1(clk25M),
   .CLK_OUT2(clk24M),
   .RESET(rst)
  );
 
-/* CAPTURA DE DATOS */
-
-captura
-	captura(
-	.PCLK(CPCLK),
-	.HREF(CHREF),
-	.VSYNC(CVSYNC),
-	.DATA0(CDATA0),
-	.DATA1(CDATA1),
-	.DATA2(CDATA2),
-	.DATA3(CDATA3),
-	.DATA4(CDATA4),
-	.DATA5(CDATA5),
-	.DATA6(CDATA6),
-	.DATA7(CDATA7),
-	.DP_RAM_data_in(DP_RAM_data_in),
-	.DP_RAM_addr_in(DP_RAM_addr_in),
-	.DP_RAM_regW(DP_RAM_regW)
-	);
 
 /* ****************************************************************************
 buffer_ram_dp buffer memoria dual port y reloj de lectura y escritura separados
-Se debe configurar AW  segn los calculos realizados en el Wp01
+Se debe configurar AW  según los calculos realizados en el Wp01
 se recomiendia dejar DW a 8, con el fin de optimizar recursos  y hacer RGB 332
 **************************************************************************** */
 buffer_ram_dp #( AW,DW)
@@ -153,6 +125,7 @@ buffer_ram_dp #( AW,DW)
 	.data_out(data_mem)
 	);
 	
+
 /* ****************************************************************************
 VGA_Driver640x480
 **************************************************************************** */
@@ -162,18 +135,18 @@ VGA_Driver640x480 VGA640x480
 	.clk(clk25M), 				// 25MHz  para 60 hz de 640x480
 	.pixelIn(data_mem), 		// entrada del valor de color  pixel RGB 332 
 	.pixelOut(data_RGB332), // salida del valor pixel a la VGA 
-	.Hsync_n(VGA_Hsync_n),	// sennal de sincronizacion en horizontal negada
-	.Vsync_n(VGA_Vsync_n),	// sennal de sincronizacion en vertical negada 
-	.posX(VGA_posX), 			// posicion en horizontal del pixel siguiente
-	.posY(VGA_posY) 			// posicinn en vertical  del pixel siguiente
+	.Hsync_n(VGA_Hsync_n),	// señal de sincronizaciÓn en horizontal negada
+	.Vsync_n(VGA_Vsync_n),	// señal de sincronizaciÓn en vertical negada 
+	.posX(VGA_posX), 			// posición en horizontal del pixel siguiente
+	.posY(VGA_posY) 			// posición en vertical  del pixel siguiente
 
 );
 
  
 /* ****************************************************************************
-Logica para actualizar el pixel acorde con la buffer de memoria y el pixel de 
-VGA si la imagen de la camara es menor que el display VGA, los pixeles 
-adicionales seran iguales al color del ultimo pixel de memoria 
+LÓgica para actualizar el pixel acorde con la buffer de memoria y el pixel de 
+VGA si la imagen de la camara es menor que el display  VGA, los pixeles 
+adicionales seran iguales al color del último pixel de memoria 
 **************************************************************************** */
 always @ (VGA_posX, VGA_posY) begin
 		if ((VGA_posX>CAM_SCREEN_X-1) || (VGA_posY>CAM_SCREEN_Y-1))
@@ -181,5 +154,6 @@ always @ (VGA_posX, VGA_posY) begin
 		else
 			DP_RAM_addr_out=VGA_posX+VGA_posY*CAM_SCREEN_Y;
 end
+
 
 endmodule
