@@ -1,0 +1,5 @@
+verilog work "flip_flopD_bajada.v"
+verilog work "flip_flopD.v"
+verilog work "conversor1.v"
+verilog work "contador.v"
+verilog work "captura_datos_downsampler.v"
