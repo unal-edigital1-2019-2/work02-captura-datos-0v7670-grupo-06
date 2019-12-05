@@ -31,11 +31,15 @@ if( rtcoun==1)
 begin
 Z=0;
 end
+else begin
+Z=1;
+end
+
 if( f==0 )
 begin//3
 DP_RAM_data_in [7:5]<=datos [7:5];
 DP_RAM_data_in [4:2]<=datos [2:0];
-x=1;
+//x=1;
 end//3	
 end//2
 end//1
@@ -46,14 +50,20 @@ begin
 f=1;
 x=0;
 end
+else begin
+x=1;
+end
 if (y==1 & f==1)
 begin//5
 data<=DP_RAM_data_in; //cargar dato
 write=1;//escribir dato
 f=0;
-y=0;
-w=1;
+//y=0;
+//w=1;
 end//5
+else begin
+write=0;
+end
 end//6
 
 always@(posedge pl)
@@ -63,11 +73,17 @@ begin//4
 DP_RAM_data_in[1:0]<={datos[4:3]};
 y=1;
 end//4
+else begin
+y=0;
+end
 if(w==1)
 begin
-Z=1;
+//Z=1;
 w=0;
-write=0;
+//write=0;
+end
+else begin
+w=1;
 end
 end
 

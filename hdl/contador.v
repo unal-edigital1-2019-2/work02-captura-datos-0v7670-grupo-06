@@ -18,7 +18,7 @@
 // Additional Comments: 
 //
 //////////////////////////////////////////////////////////////////////////////////
-module contador(input pl, input rst,output reg [16:0] counter=0,
+module contador(input pl, input rst,output reg [16:0] counter=-1,
   output reg OK);
   
  always @(posedge rst) begin
@@ -31,7 +31,8 @@ else begin
 OK=0;
 end
 end 
+/*
 always @(negedge rst) begin
 OK=0;
-end
+end*/
 endmodule
