@@ -19,7 +19,7 @@
 //
 //////////////////////////////////////////////////////////////////////////////////
 module test_cam(
-    input wire clk,           // board clock: 32 MHz 
+    input wire clk,           // board clock: 100 MHz 
     input wire rst,         	// reset button
 
 	// VGA input/output  
@@ -33,9 +33,12 @@ module test_cam(
 	
 	output wire CAM_xclk,		// System  clock imput
 	output wire CAM_pwdn,		// power down mode 
-	output wire CAM_reset		// clear all registers of cam
+	output wire CAM_reset,		// clear all registers of cam
 	// colocar aqui las entras  y salidas de la camara 
-
+   input CAMARA_PCLK,				
+	input CAMARA_HREF,				
+	input CAMARA_VSYNC,				
+	input CAMARA_DATOS 
 );
 
 // TAMAÑO DE ADQUISICIÓN DE LA CAMARA 
@@ -52,7 +55,7 @@ localparam BLUE_VGA =  8'b00000011;
 
 
 // Clk 
-wire clk32M;
+wire clk100M;
 wire clk25M;
 wire clk24M;
 
@@ -99,7 +102,8 @@ assign CAM_reset=  0;
   utilizado para la camara , a partir de una frecuencia de 32 Mhz
 **************************************************************************** */
 //assign clk32M =clk;
-clk_32MHZ_to_25M_24M
+assign clk100M =clk;
+
   clk25_24(
   .CLK_IN1(clk),
   .CLK_OUT1(clk25M),
@@ -154,6 +158,25 @@ always @ (VGA_posX, VGA_posY) begin
 		else
 			DP_RAM_addr_out=VGA_posX+VGA_posY*CAM_SCREEN_Y;
 end
+
+/* ****************************************************************************
+
+             Captura de datos! :D
+
+**************************************************************************** */
+
+captura_datos_downsampler 
+	captura(
+	.VSYNC(CAMARA_VSYNC),
+	.HREF(CAMARA_HREF),
+	.PCLK(CAMARA_PCLK),
+	.datos(CAMARA_DATOS),
+	.DP_RAM_data_in(##########),
+	.DP_RAM_addr_in(##########),
+	.regW(######)
+	);
+
+
 
 
 endmodule

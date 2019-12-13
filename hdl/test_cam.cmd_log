@@ -1,3 +1,6 @@
 xst -intstyle ise -ifn "/home/ivan/work02-captura-datos-0v7670-grupo-06/hdl/test_cam.xst" -ofn "/home/ivan/work02-captura-datos-0v7670-grupo-06/hdl/test_cam.syr" 
 xst -intstyle ise -ifn "/home/ivan/work02-captura-datos-0v7670-grupo-06/hdl/test_cam.xst" -ofn "/home/ivan/work02-captura-datos-0v7670-grupo-06/hdl/test_cam.syr" 
 xst -intstyle ise -ifn "/home/ivan/work02-captura-datos-0v7670-grupo-06/hdl/test_cam.xst" -ofn "/home/ivan/work02-captura-datos-0v7670-grupo-06/hdl/test_cam.syr" 
+xst -intstyle ise -ifn "/home/juan/Documentos/GitHub/work02-captura-datos-0v7670-grupo-06/hdl/test_cam.xst" -ofn "/home/juan/Documentos/GitHub/work02-captura-datos-0v7670-grupo-06/hdl/test_cam.syr" 
+xst -intstyle ise -ifn "/home/juan/Documentos/GitHub/work02-captura-datos-0v7670-grupo-06/hdl/test_cam.xst" -ofn "/home/juan/Documentos/GitHub/work02-captura-datos-0v7670-grupo-06/hdl/test_cam.syr" 
+xst -intstyle ise -ifn "/home/juan/Documentos/GitHub/work02-captura-datos-0v7670-grupo-06/hdl/test_cam.xst" -ofn "/home/juan/Documentos/GitHub/work02-captura-datos-0v7670-grupo-06/hdl/test_cam.syr" 

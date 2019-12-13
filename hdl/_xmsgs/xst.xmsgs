@@ -5,10 +5,10 @@
      behavior or data corruption.  It is strongly advised that
      users do not edit the contents of this file. -->
 <messages>
-<msg type="error" file="HDLCompiler" num="1654" delta="old" >"/home/ivan/work02-captura-datos-0v7670-grupo-06/hdl/src/test_cam.v" Line 102: Instantiating &lt;<arg fmt="%s" index="1">clk25_24</arg>&gt; from unknown module &lt;<arg fmt="%s" index="2">clk_32MHZ_to_25M_24M</arg>&gt;
+<msg type="error" file="HDLCompiler" num="806" delta="new" >"/home/juan/Documentos/GitHub/work02-captura-datos-0v7670-grupo-06/hdl/src/test_cam.v" Line 174: Syntax error near &quot;<arg fmt="%s" index="1">#</arg>&quot;.
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="1499" delta="old" >"/home/ivan/work02-captura-datos-0v7670-grupo-06/hdl/src/test_cam.v" Line 21: Empty module &lt;<arg fmt="%s" index="1">test_cam</arg>&gt; remains a black box.
+<msg type="error" file="HDLCompiler" num="598" delta="new" >"/home/juan/Documentos/GitHub/work02-captura-datos-0v7670-grupo-06/hdl/src/test_cam.v" Line 21: Module &lt;<arg fmt="%s" index="1">test_cam</arg>&gt; ignored due to previous errors.
 </msg>
 
 </messages>
