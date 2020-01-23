@@ -18,16 +18,16 @@
 // Additional Comments: 
 //
 //////////////////////////////////////////////////////////////////////////////////
-module captura_datos_downsampler(VSYNC,HREF,PCLK,datos,DP_RAM_data_in,DP_RAM_addr_in,regW);
+module captura_datos_downsampler(VSYNC,HREF,PCLK,datos,DATARAMIN,ADDRRAMIN,regW);
 input VSYNC,HREF,PCLK;//declaracion,je
 input [7:0] datos;
-output [7:0] DP_RAM_data_in;
-output [7:0] DP_RAM_addr_in;
+output [7:0] DATARAMIN;
+output [14:0] ADDRRAMIN;
 output  regW;
 wire w0,w1,w2,w3,w4;
 reg f1=1,f2=0;
 flip_flopD m1 (.D(f1), .Q(w0), .pl(VSYNC),.async_reset(f2));
 flip_flopD_bajada m2 (.D(w0), .Q(w1), .pl(VSYNC),.async_reset(f2));
-conversor1 m3 (.ver(w1),.ver2(HREF),.datos(datos),.pl(PCLK),.rtcoun(w4),.Z(w3),.data(DP_RAM_data_in),.write(regW));
-contador m5(.pl(w3), .rst(PCLK),.OK(w4),.counter(DP_RAM_addr_in));
+conversor1 m3 (.ver(w1),.ver2(HREF),.datos(datos),.pl(PCLK),.rtcoun(w4),.Z(w3),.data(DATARAMIN),.write(regW));
+contador m5(.pl(w3), .rst(PCLK),.OK(w4),.counter(ADDRRAMIN));
 endmodule

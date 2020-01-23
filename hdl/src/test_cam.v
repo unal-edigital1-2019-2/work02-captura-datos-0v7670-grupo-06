@@ -38,7 +38,7 @@ module test_cam(
    input CAMARA_PCLK,				
 	input CAMARA_HREF,				
 	input CAMARA_VSYNC,				
-	input CAMARA_DATOS 
+	input CAMARA_DATOS
 );
 
 // TAMAÑO DE ADQUISICIÓN DE LA CAMARA 
@@ -102,7 +102,7 @@ assign CAM_reset=  0;
   utilizado para la camara , a partir de una frecuencia de 32 Mhz
 **************************************************************************** */
 //assign clk32M =clk;
-assign clk100M =clk;
+/*assign clk100M =clk;
 
   clk25_24(
   .CLK_IN1(clk),
@@ -110,7 +110,7 @@ assign clk100M =clk;
   .CLK_OUT2(clk24M),
   .RESET(rst)
  );
-
+*/
 
 /* ****************************************************************************
 buffer_ram_dp buffer memoria dual port y reloj de lectura y escritura separados
@@ -171,9 +171,9 @@ captura_datos_downsampler
 	.HREF(CAMARA_HREF),
 	.PCLK(CAMARA_PCLK),
 	.datos(CAMARA_DATOS),
-	.DP_RAM_data_in(##########),
-	.DP_RAM_addr_in(##########),
-	.regW(######)
+	.DATARAMIN(DP_RAM_data_in),
+	.ADDRRAMIN(DP_RAM_addr_in),
+	.regW(DP_RAM_regW)
 	);
 
 
