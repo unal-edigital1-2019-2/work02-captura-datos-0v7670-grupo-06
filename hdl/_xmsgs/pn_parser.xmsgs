@@ -8,7 +8,7 @@
 <!-- Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.    -->
 
 <messages>
-<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;/home/juan/Documentos/GitHub/work02-captura-datos-0v7670-grupo-06/hdl/conversor1.v&quot; into library work</arg>
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;/home/juan/Documentos/GitHub/work02-captura-datos-0v7670-grupo-06/hdl/clk25_24.v&quot; into library work</arg>
 </msg>
 
 </messages>

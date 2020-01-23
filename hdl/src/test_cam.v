@@ -102,7 +102,7 @@ assign CAM_reset=  0;
   utilizado para la camara , a partir de una frecuencia de 32 Mhz
 **************************************************************************** */
 //assign clk32M =clk;
-/*assign clk100M =clk;
+//assign clk100M =clk;
 
   clk25_24(
   .CLK_IN1(clk),
@@ -110,7 +110,7 @@ assign CAM_reset=  0;
   .CLK_OUT2(clk24M),
   .RESET(rst)
  );
-*/
+
 
 /* ****************************************************************************
 buffer_ram_dp buffer memoria dual port y reloj de lectura y escritura separados
@@ -123,7 +123,6 @@ buffer_ram_dp #( AW,DW)
 	.addr_in(DP_RAM_addr_in), 
 	.data_in(DP_RAM_data_in),
 	.regwrite(DP_RAM_regW), 
-	
 	.clk_r(clk25M), 
 	.addr_out(DP_RAM_addr_out),
 	.data_out(data_mem)
@@ -165,15 +164,16 @@ end
 
 **************************************************************************** */
 
-captura_datos_downsampler 
+cam_read
 	captura(
-	.VSYNC(CAMARA_VSYNC),
-	.HREF(CAMARA_HREF),
-	.PCLK(CAMARA_PCLK),
-	.datos(CAMARA_DATOS),
-	.DATARAMIN(DP_RAM_data_in),
-	.ADDRRAMIN(DP_RAM_addr_in),
-	.regW(DP_RAM_regW)
+	.pclk(CAMARA_PCLK),
+	.rst(rst),
+	.vsync(CAMARA_VSYNC),
+	.href(CAMARA_HREF),
+	.px_data(CAMARA_DATOS),
+	.mem_px_addr(DP_RAM_addr_in),
+	.mem_px_data(DP_RAM_data_in),
+	.px_wr(DP_RAM_regW)
 	);
 
 

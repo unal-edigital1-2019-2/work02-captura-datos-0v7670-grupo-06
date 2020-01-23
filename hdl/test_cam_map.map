@@ -10,7 +10,7 @@ Target Device  : xc7a100t
 Target Package : csg324
 Target Speed   : -3
 Mapper Version : artix7 -- $Revision: 1.55 $
-Mapped Date    : Thu Jan 23 15:53:59 2020
+Mapped Date    : Thu Jan 23 17:08:09 2020
 
 Mapping design into LUTs...
 Running directed packing...
@@ -19,26 +19,26 @@ Updating timing models...
 INFO:Map:215 - The Interim Design Summary has been generated in the MAP Report
    (.mrp).
 Running timing-driven placement...
-Total REAL time at the beginning of Placer: 20 secs 
-Total CPU  time at the beginning of Placer: 20 secs 
+Total REAL time at the beginning of Placer: 19 secs 
+Total CPU  time at the beginning of Placer: 19 secs 
 
 Phase 1.1  Initial Placement Analysis
-Phase 1.1  Initial Placement Analysis (Checksum:cd9ae13) REAL time: 21 secs 
+Phase 1.1  Initial Placement Analysis (Checksum:1009e2d4) REAL time: 21 secs 
 
 Phase 2.7  Design Feasibility Check
-Phase 2.7  Design Feasibility Check (Checksum:cd9ae13) REAL time: 21 secs 
+Phase 2.7  Design Feasibility Check (Checksum:1009e2d4) REAL time: 21 secs 
 
 Phase 3.31  Local Placement Optimization
-Phase 3.31  Local Placement Optimization (Checksum:cd9ae13) REAL time: 21 secs 
+Phase 3.31  Local Placement Optimization (Checksum:1009e2d4) REAL time: 21 secs 
 
 Phase 4.2  Initial Placement for Architecture Specific Features
 
-.......
+..........
 ERROR:Place:1398 - A clock IOB / BUFGCTRL clock component pair have been found
    that are not placed at an optimal clock IOB / BUFGCTRL site pair. The clock
    IOB component <CAMARA_PCLK> is placed at site <H4>. The corresponding
-   BUFGCTRL component <CAMARA_PCLK_IBUF_BUFG> is placed at site
-   <BUFGCTRL_X0Y20>. The clock IO can use the fast path between the IOB and the
+   BUFGCTRL component <CAMARA_PCLK_BUFGP/BUFG> is placed at site
+   <BUFGCTRL_X0Y7>. The clock IO can use the fast path between the IOB and the
    Clock Buffer if the IOB is placed on a Clock Capable IOB site that has
    dedicated fast path to BUFGCTRL sites in its half of the device (TOP or
    BOTTOM). You may want to analyze why this problem exists and correct it. If
@@ -51,28 +51,11 @@ ERROR:Place:1398 - A clock IOB / BUFGCTRL clock component pair have been found
    examples can be used directly in the .ucf file to override this clock rule.
    < NET "CAMARA_PCLK" CLOCK_DEDICATED_ROUTE = FALSE; >
 
-ERROR:Place:1398 - A clock IOB / BUFGCTRL clock component pair have been found
-   that are not placed at an optimal clock IOB / BUFGCTRL site pair. The clock
-   IOB component <CAMARA_VSYNC> is placed at site <G1>. The corresponding
-   BUFGCTRL component <CAMARA_VSYNC_BUFGP/BUFG> is placed at site
-   <BUFGCTRL_X0Y16>. The clock IO can use the fast path between the IOB and the
-   Clock Buffer if the IOB is placed on a Clock Capable IOB site that has
-   dedicated fast path to BUFGCTRL sites in its half of the device (TOP or
-   BOTTOM). You may want to analyze why this problem exists and correct it. If
-   this sub optimal condition is acceptable for this design, you may use the
-   CLOCK_DEDICATED_ROUTE constraint in the .ucf file to demote this message to a
-   WARNING and allow your design to continue. However, the use of this override
-   is highly discouraged as it may lead to very poor timing results. It is
-   recommended that this error condition be corrected in the design. A list of
-   all the COMP.PINs used in this clock placement rule is listed below. These
-   examples can be used directly in the .ucf file to override this clock rule.
-   < NET "CAMARA_VSYNC" CLOCK_DEDICATED_ROUTE = FALSE; >
-
 Phase 4.2  Initial Placement for Architecture Specific Features
-(Checksum:d0c1bea3) REAL time: 23 secs 
+(Checksum:12173ee3) REAL time: 24 secs 
 
-Total REAL time to Placer completion: 23 secs 
-Total CPU  time to Placer completion: 23 secs 
+Total REAL time to Placer completion: 24 secs 
+Total CPU  time to Placer completion: 24 secs 
 ERROR:Pack:1654 - The timing-driven placement phase encountered an error.
 
 Mapping completed.
@@ -81,5 +64,5 @@ Problem encountered during the packing phase.
 
 Design Summary
 --------------
-Number of errors   :   3
+Number of errors   :   2
 Number of warnings :   0

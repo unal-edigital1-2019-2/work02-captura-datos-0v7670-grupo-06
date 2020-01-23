@@ -4,15 +4,15 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 Parameter TMPDIR set to xst/projnav.tmp
 
 
-Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.03 secs
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.04 secs
  
 --> 
 Parameter xsthdpdir set to xst
 
 
-Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.03 secs
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.04 secs
  
 --> 
 Reading design: test_cam.prj
@@ -108,53 +108,56 @@ Slice Utilization Ratio Delta      : 5
 =========================================================================
 *                          HDL Parsing                                  *
 =========================================================================
-Analyzing Verilog file "/home/juan/Documentos/GitHub/work02-captura-datos-0v7670-grupo-06/hdl/flip_flopD_bajada.v" into library work
-Parsing module <flip_flopD_bajada>.
-Analyzing Verilog file "/home/juan/Documentos/GitHub/work02-captura-datos-0v7670-grupo-06/hdl/flip_flopD.v" into library work
-Parsing module <flip_flopD>.
-Analyzing Verilog file "/home/juan/Documentos/GitHub/work02-captura-datos-0v7670-grupo-06/hdl/conversor1.v" into library work
-Parsing module <conversor1>.
-Analyzing Verilog file "/home/juan/Documentos/GitHub/work02-captura-datos-0v7670-grupo-06/hdl/contador.v" into library work
-Parsing module <contador>.
 Analyzing Verilog file "/home/juan/Documentos/GitHub/work02-captura-datos-0v7670-grupo-06/hdl/src/VGA_driver.v" into library work
 Parsing module <VGA_Driver640x480>.
 Analyzing Verilog file "/home/juan/Documentos/GitHub/work02-captura-datos-0v7670-grupo-06/hdl/src/buffer_ram_dp.v" into library work
 Parsing module <buffer_ram_dp>.
-Analyzing Verilog file "/home/juan/Documentos/GitHub/work02-captura-datos-0v7670-grupo-06/hdl/captura_datos_downsampler.v" into library work
-Parsing module <captura_datos_downsampler>.
+Analyzing Verilog file "/home/juan/Documentos/GitHub/work02-captura-datos-0v7670-grupo-06/hdl/clk25_24.v" into library work
+Parsing module <clk25_24>.
+Analyzing Verilog file "/home/juan/Documentos/GitHub/work02-captura-datos-0v7670-grupo-06/hdl/captura.v" into library work
+Parsing module <cam_read>.
 Analyzing Verilog file "/home/juan/Documentos/GitHub/work02-captura-datos-0v7670-grupo-06/hdl/src/test_cam.v" into library work
 Parsing module <test_cam>.
 
 =========================================================================
 *                            HDL Elaboration                            *
 =========================================================================
+WARNING:HDLCompiler:1016 - "/home/juan/Documentos/GitHub/work02-captura-datos-0v7670-grupo-06/hdl/src/test_cam.v" Line 107: Port LOCKED is not connected to this instance
 
 Elaborating module <test_cam>.
+WARNING:HDLCompiler:604 - "/home/juan/Documentos/GitHub/work02-captura-datos-0v7670-grupo-06/hdl/src/test_cam.v" Line 107: Module instantiation should have an instance name
+
+Elaborating module <clk25_24>.
+
+Elaborating module <BUFG>.
+
+Elaborating module <MMCME2_ADV(BANDWIDTH="OPTIMIZED",CLKOUT4_CASCADE="FALSE",COMPENSATION="ZHOLD",STARTUP_WAIT="FALSE",DIVCLK_DIVIDE=1,CLKFBOUT_MULT_F=12.0,CLKFBOUT_PHASE=0.0,CLKFBOUT_USE_FINE_PS="FALSE",CLKOUT0_DIVIDE_F=48.0,CLKOUT0_PHASE=0.0,CLKOUT0_DUTY_CYCLE=0.5,CLKOUT0_USE_FINE_PS="FALSE",CLKOUT1_DIVIDE=50,CLKOUT1_PHASE=0.0,CLKOUT1_DUTY_CYCLE=0.5,CLKOUT1_USE_FINE_PS="FALSE",CLKIN1_PERIOD=10.0,REF_JITTER1=0.01)>.
+WARNING:HDLCompiler:1127 - "/home/juan/Documentos/GitHub/work02-captura-datos-0v7670-grupo-06/hdl/clk25_24.v" Line 132: Assignment to clkfboutb_unused ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/juan/Documentos/GitHub/work02-captura-datos-0v7670-grupo-06/hdl/clk25_24.v" Line 134: Assignment to clkout0b_unused ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/juan/Documentos/GitHub/work02-captura-datos-0v7670-grupo-06/hdl/clk25_24.v" Line 136: Assignment to clkout1b_unused ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/juan/Documentos/GitHub/work02-captura-datos-0v7670-grupo-06/hdl/clk25_24.v" Line 137: Assignment to clkout2_unused ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/juan/Documentos/GitHub/work02-captura-datos-0v7670-grupo-06/hdl/clk25_24.v" Line 138: Assignment to clkout2b_unused ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/juan/Documentos/GitHub/work02-captura-datos-0v7670-grupo-06/hdl/clk25_24.v" Line 139: Assignment to clkout3_unused ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/juan/Documentos/GitHub/work02-captura-datos-0v7670-grupo-06/hdl/clk25_24.v" Line 140: Assignment to clkout3b_unused ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/juan/Documentos/GitHub/work02-captura-datos-0v7670-grupo-06/hdl/clk25_24.v" Line 141: Assignment to clkout4_unused ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/juan/Documentos/GitHub/work02-captura-datos-0v7670-grupo-06/hdl/clk25_24.v" Line 142: Assignment to clkout5_unused ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/juan/Documentos/GitHub/work02-captura-datos-0v7670-grupo-06/hdl/clk25_24.v" Line 143: Assignment to clkout6_unused ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/juan/Documentos/GitHub/work02-captura-datos-0v7670-grupo-06/hdl/clk25_24.v" Line 155: Assignment to do_unused ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/juan/Documentos/GitHub/work02-captura-datos-0v7670-grupo-06/hdl/clk25_24.v" Line 156: Assignment to drdy_unused ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/juan/Documentos/GitHub/work02-captura-datos-0v7670-grupo-06/hdl/clk25_24.v" Line 162: Assignment to psdone_unused ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/juan/Documentos/GitHub/work02-captura-datos-0v7670-grupo-06/hdl/clk25_24.v" Line 165: Assignment to clkinstopped_unused ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/juan/Documentos/GitHub/work02-captura-datos-0v7670-grupo-06/hdl/clk25_24.v" Line 166: Assignment to clkfbstopped_unused ignored, since the identifier is never used
 
 Elaborating module <buffer_ram_dp(AW=15,DW=8)>.
-Reading initialization file \"src/image.men\".
-WARNING:HDLCompiler:1670 - "/home/juan/Documentos/GitHub/work02-captura-datos-0v7670-grupo-06/hdl/src/buffer_ram_dp.v" Line 53: Signal <ram> in initial block is partially initialized.
 
 Elaborating module <VGA_Driver640x480>.
 WARNING:HDLCompiler:413 - "/home/juan/Documentos/GitHub/work02-captura-datos-0v7670-grupo-06/hdl/src/VGA_driver.v" Line 68: Result of 10-bit expression is truncated to fit in 9-bit target.
 WARNING:HDLCompiler:413 - "/home/juan/Documentos/GitHub/work02-captura-datos-0v7670-grupo-06/hdl/src/VGA_driver.v" Line 72: Result of 11-bit expression is truncated to fit in 10-bit target.
-WARNING:HDLCompiler:413 - "/home/juan/Documentos/GitHub/work02-captura-datos-0v7670-grupo-06/hdl/src/test_cam.v" Line 159: Result of 17-bit expression is truncated to fit in 15-bit target.
+WARNING:HDLCompiler:413 - "/home/juan/Documentos/GitHub/work02-captura-datos-0v7670-grupo-06/hdl/src/test_cam.v" Line 158: Result of 17-bit expression is truncated to fit in 15-bit target.
 
-Elaborating module <captura_datos_downsampler>.
-WARNING:HDLCompiler:872 - "/home/juan/Documentos/GitHub/work02-captura-datos-0v7670-grupo-06/hdl/captura_datos_downsampler.v" Line 28: Using initial value of f1 since it is never assigned
-
-Elaborating module <flip_flopD>.
-
-Elaborating module <flip_flopD_bajada>.
-
-Elaborating module <conversor1>.
-
-Elaborating module <contador>.
-WARNING:HDLCompiler:413 - "/home/juan/Documentos/GitHub/work02-captura-datos-0v7670-grupo-06/hdl/contador.v" Line 28: Result of 18-bit expression is truncated to fit in 17-bit target.
-WARNING:HDLCompiler:189 - "/home/juan/Documentos/GitHub/work02-captura-datos-0v7670-grupo-06/hdl/captura_datos_downsampler.v" Line 32: Size mismatch in connection of port <counter>. Formal port size is 17-bit while actual signal size is 15-bit.
-WARNING:HDLCompiler:189 - "/home/juan/Documentos/GitHub/work02-captura-datos-0v7670-grupo-06/hdl/src/test_cam.v" Line 173: Size mismatch in connection of port <datos>. Formal port size is 8-bit while actual signal size is 1-bit.
-WARNING:HDLCompiler:634 - "/home/juan/Documentos/GitHub/work02-captura-datos-0v7670-grupo-06/hdl/src/test_cam.v" Line 59: Net <clk25M> does not have a driver.
-WARNING:HDLCompiler:634 - "/home/juan/Documentos/GitHub/work02-captura-datos-0v7670-grupo-06/hdl/src/test_cam.v" Line 60: Net <clk24M> does not have a driver.
+Elaborating module <cam_read>.
+WARNING:HDLCompiler:413 - "/home/juan/Documentos/GitHub/work02-captura-datos-0v7670-grupo-06/hdl/captura.v" Line 60: Result of 16-bit expression is truncated to fit in 15-bit target.
+WARNING:HDLCompiler:189 - "/home/juan/Documentos/GitHub/work02-captura-datos-0v7670-grupo-06/hdl/src/test_cam.v" Line 173: Size mismatch in connection of port <px_data>. Formal port size is 8-bit while actual signal size is 1-bit.
 
 =========================================================================
 *                           HDL Synthesis                               *
@@ -164,18 +167,23 @@ Synthesizing Unit <test_cam>.
     Related source file is "/home/juan/Documentos/GitHub/work02-captura-datos-0v7670-grupo-06/hdl/src/test_cam.v".
         CAM_SCREEN_X = 160
         CAM_SCREEN_Y = 120
-WARNING:Xst:653 - Signal <clk25M> is used but never assigned. This sourceless signal will be automatically connected to value GND.
-WARNING:Xst:653 - Signal <clk24M> is used but never assigned. This sourceless signal will be automatically connected to value GND.
-    Found 16-bit adder for signal <n0022> created at line 159.
-    Found 9x7-bit multiplier for signal <n0029> created at line 159.
-    Found 10-bit comparator greater for signal <GND_1_o_VGA_posX[9]_LessThan_4_o> created at line 156
-    Found 9-bit comparator greater for signal <GND_1_o_VGA_posY[8]_LessThan_5_o> created at line 156
+INFO:Xst:3210 - "/home/juan/Documentos/GitHub/work02-captura-datos-0v7670-grupo-06/hdl/src/test_cam.v" line 107: Output port <LOCKED> of the instance <_i000004> is unconnected or connected to loadless signal.
+    Found 16-bit adder for signal <n0022> created at line 158.
+    Found 9x7-bit multiplier for signal <n0029> created at line 158.
+    Found 10-bit comparator greater for signal <GND_1_o_VGA_posX[9]_LessThan_5_o> created at line 155
+    Found 9-bit comparator greater for signal <GND_1_o_VGA_posY[8]_LessThan_6_o> created at line 155
     Summary:
 	inferred   1 Multiplier(s).
 	inferred   1 Adder/Subtractor(s).
 	inferred   2 Comparator(s).
 	inferred   1 Multiplexer(s).
 Unit <test_cam> synthesized.
+
+Synthesizing Unit <clk25_24>.
+    Related source file is "/home/juan/Documentos/GitHub/work02-captura-datos-0v7670-grupo-06/hdl/clk25_24.v".
+    Summary:
+	no macro.
+Unit <clk25_24> synthesized.
 
 Synthesizing Unit <buffer_ram_dp>.
     Related source file is "/home/juan/Documentos/GitHub/work02-captura-datos-0v7670-grupo-06/hdl/src/buffer_ram_dp.v".
@@ -193,13 +201,13 @@ Synthesizing Unit <VGA_Driver640x480>.
     Related source file is "/home/juan/Documentos/GitHub/work02-captura-datos-0v7670-grupo-06/hdl/src/VGA_driver.v".
     Found 9-bit register for signal <countY>.
     Found 10-bit register for signal <countX>.
-    Found 9-bit adder for signal <countY[8]_GND_3_o_add_10_OUT> created at line 68.
-    Found 10-bit adder for signal <countX[9]_GND_3_o_add_11_OUT> created at line 72.
-    Found 10-bit comparator greater for signal <countX[9]_PWR_3_o_LessThan_3_o> created at line 50
+    Found 9-bit adder for signal <countY[8]_GND_6_o_add_10_OUT> created at line 68.
+    Found 10-bit adder for signal <countX[9]_GND_6_o_add_11_OUT> created at line 72.
+    Found 10-bit comparator greater for signal <countX[9]_PWR_6_o_LessThan_3_o> created at line 50
     Found 10-bit comparator lessequal for signal <n0004> created at line 52
-    Found 10-bit comparator greater for signal <countX[9]_PWR_3_o_LessThan_6_o> created at line 52
+    Found 10-bit comparator greater for signal <countX[9]_PWR_6_o_LessThan_6_o> created at line 52
     Found 9-bit comparator lessequal for signal <n0009> created at line 53
-    Found 9-bit comparator greater for signal <countY[8]_PWR_3_o_LessThan_8_o> created at line 53
+    Found 9-bit comparator greater for signal <countY[8]_PWR_6_o_LessThan_8_o> created at line 53
     Found 10-bit comparator greater for signal <n0014> created at line 62
     Summary:
 	inferred   2 Adder/Subtractor(s).
@@ -208,57 +216,19 @@ Synthesizing Unit <VGA_Driver640x480>.
 	inferred   1 Multiplexer(s).
 Unit <VGA_Driver640x480> synthesized.
 
-Synthesizing Unit <captura_datos_downsampler>.
-    Related source file is "/home/juan/Documentos/GitHub/work02-captura-datos-0v7670-grupo-06/hdl/captura_datos_downsampler.v".
-    Summary:
-	no macro.
-Unit <captura_datos_downsampler> synthesized.
-
-Synthesizing Unit <flip_flopD>.
-    Related source file is "/home/juan/Documentos/GitHub/work02-captura-datos-0v7670-grupo-06/hdl/flip_flopD.v".
-    Found 1-bit register for signal <Q>.
-    Summary:
-	inferred   1 D-type flip-flop(s).
-Unit <flip_flopD> synthesized.
-
-Synthesizing Unit <flip_flopD_bajada>.
-    Related source file is "/home/juan/Documentos/GitHub/work02-captura-datos-0v7670-grupo-06/hdl/flip_flopD_bajada.v".
-    Found 1-bit register for signal <Q>.
-    Summary:
-	inferred   1 D-type flip-flop(s).
-Unit <flip_flopD_bajada> synthesized.
-
-Synthesizing Unit <conversor1>.
-    Related source file is "/home/juan/Documentos/GitHub/work02-captura-datos-0v7670-grupo-06/hdl/conversor1.v".
-    Found 1-bit register for signal <f>.
-    Found 1-bit register for signal <x>.
-    Found 8-bit register for signal <data>.
-    Found 1-bit register for signal <write>.
-    Found 1-bit register for signal <DP_RAM_data_in<1>>.
-    Found 1-bit register for signal <DP_RAM_data_in<0>>.
-    Found 1-bit register for signal <y>.
-WARNING:Xst:737 - Found 1-bit latch for signal <DP_RAM_data_in<7>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <DP_RAM_data_in<6>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <DP_RAM_data_in<5>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <DP_RAM_data_in<4>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <DP_RAM_data_in<3>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <DP_RAM_data_in<2>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <Z>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-    Summary:
-	inferred  14 D-type flip-flop(s).
-	inferred   7 Latch(s).
-	inferred   1 Multiplexer(s).
-Unit <conversor1> synthesized.
-
-Synthesizing Unit <contador>.
-    Related source file is "/home/juan/Documentos/GitHub/work02-captura-datos-0v7670-grupo-06/hdl/contador.v".
-    Found 17-bit register for signal <counter>.
-    Found 1-bit register for signal <OK>.
-    Found 17-bit adder for signal <counter[16]_GND_16_o_add_2_OUT> created at line 28.
+Synthesizing Unit <cam_read>.
+    Related source file is "/home/juan/Documentos/GitHub/work02-captura-datos-0v7670-grupo-06/hdl/captura.v".
+        AW = 15
+    Found 1-bit register for signal <countData>.
+    Found 1-bit register for signal <px_wr>.
+    Found 15-bit register for signal <mem_px_addr>.
+    Found 8-bit register for signal <mem_px_data>.
+    Found 15-bit adder for signal <mem_px_addr[14]_GND_8_o_add_3_OUT> created at line 60.
     Summary:
 	inferred   1 Adder/Subtractor(s).
-	inferred  18 D-type flip-flop(s).
-Unit <contador> synthesized.
+	inferred  25 D-type flip-flop(s).
+	inferred   8 Multiplexer(s).
+Unit <cam_read> synthesized.
 
 =========================================================================
 HDL Synthesis Report
@@ -270,24 +240,22 @@ Macro Statistics
  9x7-bit multiplier                                    : 1
 # Adders/Subtractors                                   : 4
  10-bit adder                                          : 1
+ 15-bit adder                                          : 1
  16-bit adder                                          : 1
- 17-bit adder                                          : 1
  9-bit adder                                           : 1
-# Registers                                            : 14
- 1-bit register                                        : 9
+# Registers                                            : 7
+ 1-bit register                                        : 2
  10-bit register                                       : 1
- 17-bit register                                       : 1
+ 15-bit register                                       : 1
  8-bit register                                        : 2
  9-bit register                                        : 1
-# Latches                                              : 7
- 1-bit latch                                           : 7
 # Comparators                                          : 8
  10-bit comparator greater                             : 4
  10-bit comparator lessequal                           : 1
  9-bit comparator greater                              : 2
  9-bit comparator lessequal                            : 1
-# Multiplexers                                         : 3
- 1-bit 2-to-1 multiplexer                              : 1
+# Multiplexers                                         : 10
+ 1-bit 2-to-1 multiplexer                              : 8
  15-bit 2-to-1 multiplexer                             : 1
  8-bit 2-to-1 multiplexer                              : 1
 
@@ -297,52 +265,6 @@ Macro Statistics
 *                       Advanced HDL Synthesis                          *
 =========================================================================
 
-WARNING:Xst:1426 - The value init of the FF/Latch Q hinder the constant cleaning in the block m1.
-   You should achieve better results by setting this init to 1.
-WARNING:Xst:1710 - FF/Latch <countX_0> (without init value) has a constant value of 0 in block <VGA640x480>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <countX_1> (without init value) has a constant value of 0 in block <VGA640x480>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <countX_2> (without init value) has a constant value of 0 in block <VGA640x480>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <countX_3> (without init value) has a constant value of 0 in block <VGA640x480>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <countX_4> (without init value) has a constant value of 0 in block <VGA640x480>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <countX_5> (without init value) has a constant value of 0 in block <VGA640x480>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <countX_6> (without init value) has a constant value of 0 in block <VGA640x480>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <countX_7> (without init value) has a constant value of 0 in block <VGA640x480>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <countX_8> (without init value) has a constant value of 0 in block <VGA640x480>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <countX_9> (without init value) has a constant value of 0 in block <VGA640x480>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <DP_RAM_data_in_1> (without init value) has a constant value of 0 in block <m3>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <DP_RAM_data_in_0> (without init value) has a constant value of 0 in block <m3>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <DP_RAM_data_in_7> (without init value) has a constant value of 0 in block <m3>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <DP_RAM_data_in_6> (without init value) has a constant value of 0 in block <m3>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <DP_RAM_data_in_5> (without init value) has a constant value of 0 in block <m3>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <DP_RAM_data_in_4> (without init value) has a constant value of 0 in block <m3>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <DP_RAM_data_in_3> (without init value) has a constant value of 0 in block <m3>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <data_out_0> (without init value) has a constant value of 0 in block <DP_RAM>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <data_out_1> (without init value) has a constant value of 0 in block <DP_RAM>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <data_out_2> (without init value) has a constant value of 0 in block <DP_RAM>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <data_out_3> (without init value) has a constant value of 0 in block <DP_RAM>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <data_out_4> (without init value) has a constant value of 0 in block <DP_RAM>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <data_out_5> (without init value) has a constant value of 0 in block <DP_RAM>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <data_out_6> (without init value) has a constant value of 0 in block <DP_RAM>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <data_out_7> (without init value) has a constant value of 0 in block <DP_RAM>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <countY_0> (without init value) has a constant value of 0 in block <VGA640x480>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <countY_1> (without init value) has a constant value of 0 in block <VGA640x480>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <countY_2> (without init value) has a constant value of 0 in block <VGA640x480>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <countY_3> (without init value) has a constant value of 0 in block <VGA640x480>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <countY_4> (without init value) has a constant value of 0 in block <VGA640x480>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <countY_5> (without init value) has a constant value of 0 in block <VGA640x480>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <countY_6> (without init value) has a constant value of 0 in block <VGA640x480>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <countY_7> (without init value) has a constant value of 0 in block <VGA640x480>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <countY_8> (without init value) has a constant value of 0 in block <VGA640x480>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <data_0> (without init value) has a constant value of 0 in block <m3>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <data_1> (without init value) has a constant value of 0 in block <m3>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <data_3> (without init value) has a constant value of 0 in block <m3>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <data_4> (without init value) has a constant value of 0 in block <m3>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <data_5> (without init value) has a constant value of 0 in block <m3>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <data_6> (without init value) has a constant value of 0 in block <m3>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <data_7> (without init value) has a constant value of 0 in block <m3>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1898 - Due to constant pushing, FF/Latch <DP_RAM_data_in_2> is unconnected in block <m3>.
-WARNING:Xst:1898 - Due to constant pushing, FF/Latch <data_2> is unconnected in block <m3>.
-WARNING:Xst:1898 - Due to constant pushing, FF/Latch <write> is unconnected in block <m3>.
 
 Synthesizing (advanced) Unit <VGA_Driver640x480>.
 The following registers are absorbed into counter <countX>: 1 register on signal <countX>.
@@ -375,9 +297,9 @@ INFO:Xst:3226 - The RAM <Mram_ram> will be implemented as a BLOCK RAM, absorbing
     -----------------------------------------------------------------------
 Unit <buffer_ram_dp> synthesized (advanced).
 
-Synthesizing (advanced) Unit <contador>.
-The following registers are absorbed into counter <counter>: 1 register on signal <counter>.
-Unit <contador> synthesized (advanced).
+Synthesizing (advanced) Unit <cam_read>.
+The following registers are absorbed into counter <mem_px_addr>: 1 register on signal <mem_px_addr>.
+Unit <cam_read> synthesized (advanced).
 
 Synthesizing (advanced) Unit <test_cam>.
 	Multiplier <Mmult_n0029> in block <test_cam> and adder/subtractor <Madd_n0022_Madd> in block <test_cam> are combined into a MAC<Maddsub_n0029>.
@@ -393,17 +315,17 @@ Macro Statistics
  9x7-to-15-bit MAC                                     : 1
 # Counters                                             : 3
  10-bit up counter                                     : 1
- 17-bit up counter                                     : 1
+ 15-bit up counter                                     : 1
  9-bit up counter                                      : 1
-# Registers                                            : 17
- Flip-Flops                                            : 17
+# Registers                                            : 10
+ Flip-Flops                                            : 10
 # Comparators                                          : 8
  10-bit comparator greater                             : 4
  10-bit comparator lessequal                           : 1
  9-bit comparator greater                              : 2
  9-bit comparator lessequal                            : 1
-# Multiplexers                                         : 3
- 1-bit 2-to-1 multiplexer                              : 1
+# Multiplexers                                         : 10
+ 1-bit 2-to-1 multiplexer                              : 8
  15-bit 2-to-1 multiplexer                             : 1
  8-bit 2-to-1 multiplexer                              : 1
 
@@ -412,44 +334,23 @@ Macro Statistics
 =========================================================================
 *                         Low Level Synthesis                           *
 =========================================================================
-WARNING:Xst:1426 - The value init of the FF/Latch Q hinder the constant cleaning in the block flip_flopD.
-   You should achieve better results by setting this init to 1.
-INFO:Xst:2261 - The FF/Latch <DP_RAM_data_in_1> in Unit <conversor1> is equivalent to the following FF/Latch, which will be removed : <DP_RAM_data_in_0> 
-INFO:Xst:2261 - The FF/Latch <DP_RAM_data_in_7> in Unit <conversor1> is equivalent to the following 4 FFs/Latches, which will be removed : <DP_RAM_data_in_6> <DP_RAM_data_in_5> <DP_RAM_data_in_4> <DP_RAM_data_in_3> 
-INFO:Xst:2261 - The FF/Latch <data_3> in Unit <conversor1> is equivalent to the following 4 FFs/Latches, which will be removed : <data_4> <data_5> <data_6> <data_7> 
-INFO:Xst:2261 - The FF/Latch <data_0> in Unit <conversor1> is equivalent to the following FF/Latch, which will be removed : <data_1> 
-WARNING:Xst:1710 - FF/Latch <DP_RAM_data_in_7> (without init value) has a constant value of 0 in block <conversor1>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <DP_RAM_data_in_1> (without init value) has a constant value of 0 in block <conversor1>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <data_3> (without init value) has a constant value of 0 in block <conversor1>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <data_0> (without init value) has a constant value of 0 in block <conversor1>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <countX_0> (without init value) has a constant value of 0 in block <VGA_Driver640x480>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <countX_8> (without init value) has a constant value of 0 in block <VGA_Driver640x480>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <countX_7> (without init value) has a constant value of 0 in block <VGA_Driver640x480>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <countX_9> (without init value) has a constant value of 0 in block <VGA_Driver640x480>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <countX_6> (without init value) has a constant value of 0 in block <VGA_Driver640x480>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <countX_5> (without init value) has a constant value of 0 in block <VGA_Driver640x480>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <countX_3> (without init value) has a constant value of 0 in block <VGA_Driver640x480>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <countX_2> (without init value) has a constant value of 0 in block <VGA_Driver640x480>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <countX_4> (without init value) has a constant value of 0 in block <VGA_Driver640x480>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <countX_1> (without init value) has a constant value of 0 in block <VGA_Driver640x480>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <countY_0> (without init value) has a constant value of 0 in block <VGA_Driver640x480>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <countY_1> (without init value) has a constant value of 0 in block <VGA_Driver640x480>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <countY_2> (without init value) has a constant value of 0 in block <VGA_Driver640x480>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <countY_3> (without init value) has a constant value of 0 in block <VGA_Driver640x480>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <countY_4> (without init value) has a constant value of 0 in block <VGA_Driver640x480>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <countY_5> (without init value) has a constant value of 0 in block <VGA_Driver640x480>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <countY_6> (without init value) has a constant value of 0 in block <VGA_Driver640x480>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <countY_7> (without init value) has a constant value of 0 in block <VGA_Driver640x480>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <countY_8> (without init value) has a constant value of 0 in block <VGA_Driver640x480>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:2677 - Node <captura/m5/counter_15> of sequential type is unconnected in block <test_cam>.
-WARNING:Xst:2677 - Node <captura/m5/counter_16> of sequential type is unconnected in block <test_cam>.
+WARNING:Xst:1710 - FF/Latch <mem_px_data_0> (without init value) has a constant value of 0 in block <cam_read>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <mem_px_data_1> (without init value) has a constant value of 0 in block <cam_read>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <mem_px_data_3> (without init value) has a constant value of 0 in block <cam_read>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <mem_px_data_4> (without init value) has a constant value of 0 in block <cam_read>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <mem_px_data_5> (without init value) has a constant value of 0 in block <cam_read>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <mem_px_data_6> (without init value) has a constant value of 0 in block <cam_read>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <mem_px_data_7> (without init value) has a constant value of 0 in block <cam_read>. This FF/Latch will be trimmed during the optimization process.
 
 Optimizing unit <test_cam> ...
 
-Optimizing unit <conversor1> ...
+Optimizing unit <VGA_Driver640x480> ...
+
+Optimizing unit <cam_read> ...
 INFO:Xst:2399 - RAMs <DP_RAM/Mram_ram1>, <DP_RAM/Mram_ram2> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <DP_RAM/Mram_ram1>, <DP_RAM/Mram_ram5> are equivalent, second RAM is removed
 INFO:Xst:2399 - RAMs <DP_RAM/Mram_ram1>, <DP_RAM/Mram_ram6> are equivalent, second RAM is removed
+INFO:Xst:2399 - RAMs <DP_RAM/Mram_ram1>, <DP_RAM/Mram_ram4> are equivalent, second RAM is removed
+INFO:Xst:2399 - RAMs <DP_RAM/Mram_ram1>, <DP_RAM/Mram_ram5> are equivalent, second RAM is removed
 INFO:Xst:2399 - RAMs <DP_RAM/Mram_ram1>, <DP_RAM/Mram_ram7> are equivalent, second RAM is removed
 INFO:Xst:2399 - RAMs <DP_RAM/Mram_ram1>, <DP_RAM/Mram_ram8> are equivalent, second RAM is removed
 
@@ -463,8 +364,8 @@ Final Macro Processing ...
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 23
- Flip-Flops                                            : 23
+# Registers                                            : 37
+ Flip-Flops                                            : 37
 
 =========================================================================
 
@@ -487,29 +388,34 @@ Top Level Output File Name         : test_cam.ngc
 
 Primitive and Black Box Usage:
 ------------------------------
-# BELS                             : 52
+# BELS                             : 217
 #      GND                         : 1
 #      INV                         : 3
-#      LUT1                        : 14
-#      LUT3                        : 3
-#      LUT5                        : 1
-#      MUXCY                       : 14
+#      LUT1                        : 35
+#      LUT2                        : 32
+#      LUT3                        : 6
+#      LUT4                        : 9
+#      LUT5                        : 10
+#      LUT6                        : 11
+#      MUXCY                       : 52
 #      VCC                         : 1
-#      XORCY                       : 15
-# FlipFlops/Latches                : 25
-#      FD                          : 3
-#      FD_1                        : 5
-#      FDE                         : 15
-#      LD                          : 1
-#      LDE_1                       : 1
-# RAMS                             : 3
-#      RAMB36E1                    : 3
-# Clock Buffers                    : 3
-#      BUFG                        : 1
-#      BUFGP                       : 2
-# IO Buffers                       : 20
-#      IBUF                        : 3
+#      XORCY                       : 57
+# FlipFlops/Latches                : 37
+#      FD                          : 6
+#      FDE                         : 1
+#      FDR                         : 6
+#      FDRE                        : 24
+# RAMS                             : 2
+#      RAMB36E1                    : 2
+# Clock Buffers                    : 5
+#      BUFG                        : 4
+#      BUFGP                       : 1
+# IO Buffers                       : 22
+#      IBUF                        : 4
+#      IBUFG                       : 1
 #      OBUF                        : 17
+# Others                           : 1
+#      MMCME2_ADV                  : 1
 
 Device utilization summary:
 ---------------------------
@@ -518,26 +424,25 @@ Selected Device : 7a100tcsg324-3
 
 
 Slice Logic Utilization: 
- Number of Slice Registers:              24  out of  126800     0%  
- Number of Slice LUTs:                   21  out of  63400     0%  
-    Number used as Logic:                21  out of  63400     0%  
+ Number of Slice Registers:              37  out of  126800     0%  
+ Number of Slice LUTs:                  106  out of  63400     0%  
+    Number used as Logic:               106  out of  63400     0%  
 
 Slice Logic Distribution: 
- Number of LUT Flip Flop pairs used:     24
-   Number with an unused Flip Flop:       0  out of     24     0%  
-   Number with an unused LUT:             3  out of     24    12%  
-   Number of fully used LUT-FF pairs:    21  out of     24    87%  
-   Number of unique control sets:         5
+ Number of LUT Flip Flop pairs used:    106
+   Number with an unused Flip Flop:      69  out of    106    65%  
+   Number with an unused LUT:             0  out of    106     0%  
+   Number of fully used LUT-FF pairs:    37  out of    106    34%  
+   Number of unique control sets:         7
 
 IO Utilization: 
  Number of IOs:                          23
- Number of bonded IOBs:                  22  out of    210    10%  
-    IOB Flip Flops/Latches:               1
+ Number of bonded IOBs:                  23  out of    210    10%  
 
 Specific Feature Utilization:
- Number of Block RAM/FIFO:                3  out of    135     2%  
-    Number using Block RAM only:          3
- Number of BUFG/BUFGCTRLs:                3  out of     32     9%  
+ Number of Block RAM/FIFO:                2  out of    135     1%  
+    Number using Block RAM only:          2
+ Number of BUFG/BUFGCTRLs:                5  out of     32    15%  
 
 ---------------------------
 Partition Resource Summary:
@@ -557,20 +462,13 @@ NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
 
 Clock Information:
 ------------------
----------------------------------------------------------------------------+----------------------------------+-------+
-Clock Signal                                                               | Clock buffer(FF name)            | Load  |
----------------------------------------------------------------------------+----------------------------------+-------+
-CAMARA_VSYNC                                                               | BUFGP                            | 2     |
-CAMARA_PCLK                                                                | IBUF+BUFG                        | 21    |
-captura/m3/f                                                               | NONE(captura/m3/DP_RAM_data_in_2)| 1     |
-captura/m3/GND_8_o_GND_8_o_AND_85_o(captura/m3/GND_8_o_GND_8_o_AND_85_o1:O)| NONE(*)(captura/m3/Z)            | 1     |
-DP_RAM_addr_out<0>                                                         | NONE(DP_RAM/Mram_ram1)           | 3     |
-clk                                                                        | BUFGP                            | 3     |
----------------------------------------------------------------------------+----------------------------------+-------+
-(*) This 1 clock signal(s) are generated by combinatorial logic,
-and XST is not able to identify which are the primary clock signals.
-Please use the CLOCK_SIGNAL constraint to specify the clock signal(s) generated by combinatorial logic.
-INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+_i000004/clkout0                   | BUFG                   | 21    |
+CAMARA_PCLK                        | BUFGP                  | 18    |
+clk                                | IBUFG                  | 2     |
+-----------------------------------+------------------------+-------+
 
 Asynchronous Control Signals Information:
 ----------------------------------------
@@ -580,92 +478,153 @@ Timing Summary:
 ---------------
 Speed Grade: -3
 
-   Minimum period: 1.797ns (Maximum Frequency: 556.390MHz)
-   Minimum input arrival time before clock: 0.856ns
-   Maximum output required time after clock: No path found
-   Maximum combinational path delay: No path found
+   Minimum period: 2.219ns (Maximum Frequency: 450.735MHz)
+   Minimum input arrival time before clock: 1.531ns
+   Maximum output required time after clock: 1.784ns
+   Maximum combinational path delay: 0.354ns
 
 Timing Details:
 ---------------
 All values displayed in nanoseconds (ns)
 
 =========================================================================
-Timing constraint: Default period analysis for Clock 'CAMARA_VSYNC'
-  Clock period: 1.297ns (frequency: 771.248MHz)
-  Total number of paths / destination ports: 1 / 1
+Timing constraint: Default period analysis for Clock '_i000004/clkout0'
+  Clock period: 2.219ns (frequency: 450.735MHz)
+  Total number of paths / destination ports: 290 / 32
 -------------------------------------------------------------------------
-Delay:               0.648ns (Levels of Logic = 0)
-  Source:            captura/m1/Q (FF)
-  Destination:       captura/m2/Q (FF)
-  Source Clock:      CAMARA_VSYNC rising
-  Destination Clock: CAMARA_VSYNC falling
+Delay:               2.219ns (Levels of Logic = 2)
+  Source:            VGA640x480/countX_3 (FF)
+  Destination:       VGA640x480/countX_8 (FF)
+  Source Clock:      _i000004/clkout0 rising
+  Destination Clock: _i000004/clkout0 rising
 
-  Data Path: captura/m1/Q to captura/m2/Q
+  Data Path: VGA640x480/countX_3 to VGA640x480/countX_8
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FD:C->Q               1   0.361   0.279  captura/m1/Q (captura/m1/Q)
-     FD_1:D                    0.008          captura/m2/Q
+     FD:C->Q               3   0.361   0.693  VGA640x480/countX_3 (VGA640x480/countX_3)
+     LUT5:I0->O            3   0.097   0.305  VGA640x480/Mcount_countX_val21 (VGA640x480/Mcount_countX_val21)
+     LUT6:I5->O            9   0.097   0.316  VGA640x480/Mcount_countX_val1 (VGA640x480/Mcount_countX_val)
+     FDR:R                     0.349          VGA640x480/countX_9
     ----------------------------------------
-    Total                      0.648ns (0.369ns logic, 0.279ns route)
-                                       (56.9% logic, 43.1% route)
+    Total                      2.219ns (0.904ns logic, 1.315ns route)
+                                       (40.7% logic, 59.3% route)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'CAMARA_PCLK'
-  Clock period: 1.797ns (frequency: 556.390MHz)
-  Total number of paths / destination ports: 132 / 20
+  Clock period: 1.793ns (frequency: 557.693MHz)
+  Total number of paths / destination ports: 141 / 34
 -------------------------------------------------------------------------
-Delay:               1.797ns (Levels of Logic = 16)
-  Source:            captura/m5/counter_0 (FF)
-  Destination:       captura/m5/counter_14 (FF)
+Delay:               1.793ns (Levels of Logic = 16)
+  Source:            captura/mem_px_addr_0 (FF)
+  Destination:       captura/mem_px_addr_14 (FF)
   Source Clock:      CAMARA_PCLK rising
   Destination Clock: CAMARA_PCLK rising
 
-  Data Path: captura/m5/counter_0 to captura/m5/counter_14
+  Data Path: captura/mem_px_addr_0 to captura/mem_px_addr_14
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDE:C->Q              4   0.361   0.293  captura/m5/counter_0 (captura/m5/counter_0)
-     INV:I->O              1   0.113   0.000  captura/m5/Mcount_counter_lut<0>_INV_0 (captura/m5/Mcount_counter_lut<0>)
-     MUXCY:S->O            1   0.353   0.000  captura/m5/Mcount_counter_cy<0> (captura/m5/Mcount_counter_cy<0>)
-     MUXCY:CI->O           1   0.023   0.000  captura/m5/Mcount_counter_cy<1> (captura/m5/Mcount_counter_cy<1>)
-     MUXCY:CI->O           1   0.023   0.000  captura/m5/Mcount_counter_cy<2> (captura/m5/Mcount_counter_cy<2>)
-     MUXCY:CI->O           1   0.023   0.000  captura/m5/Mcount_counter_cy<3> (captura/m5/Mcount_counter_cy<3>)
-     MUXCY:CI->O           1   0.023   0.000  captura/m5/Mcount_counter_cy<4> (captura/m5/Mcount_counter_cy<4>)
-     MUXCY:CI->O           1   0.023   0.000  captura/m5/Mcount_counter_cy<5> (captura/m5/Mcount_counter_cy<5>)
-     MUXCY:CI->O           1   0.023   0.000  captura/m5/Mcount_counter_cy<6> (captura/m5/Mcount_counter_cy<6>)
-     MUXCY:CI->O           1   0.023   0.000  captura/m5/Mcount_counter_cy<7> (captura/m5/Mcount_counter_cy<7>)
-     MUXCY:CI->O           1   0.023   0.000  captura/m5/Mcount_counter_cy<8> (captura/m5/Mcount_counter_cy<8>)
-     MUXCY:CI->O           1   0.023   0.000  captura/m5/Mcount_counter_cy<9> (captura/m5/Mcount_counter_cy<9>)
-     MUXCY:CI->O           1   0.023   0.000  captura/m5/Mcount_counter_cy<10> (captura/m5/Mcount_counter_cy<10>)
-     MUXCY:CI->O           1   0.023   0.000  captura/m5/Mcount_counter_cy<11> (captura/m5/Mcount_counter_cy<11>)
-     MUXCY:CI->O           1   0.023   0.000  captura/m5/Mcount_counter_cy<12> (captura/m5/Mcount_counter_cy<12>)
-     MUXCY:CI->O           0   0.023   0.000  captura/m5/Mcount_counter_cy<13> (captura/m5/Mcount_counter_cy<13>)
-     XORCY:CI->O           1   0.370   0.000  captura/m5/Mcount_counter_xor<14> (Result<14>)
-     FDE:D                     0.008          captura/m5/counter_14
+     FDRE:C->Q             3   0.361   0.289  captura/mem_px_addr_0 (captura/mem_px_addr_0)
+     INV:I->O              1   0.113   0.000  captura/Mcount_mem_px_addr_lut<0>_INV_0 (captura/Mcount_mem_px_addr_lut<0>)
+     MUXCY:S->O            1   0.353   0.000  captura/Mcount_mem_px_addr_cy<0> (captura/Mcount_mem_px_addr_cy<0>)
+     MUXCY:CI->O           1   0.023   0.000  captura/Mcount_mem_px_addr_cy<1> (captura/Mcount_mem_px_addr_cy<1>)
+     MUXCY:CI->O           1   0.023   0.000  captura/Mcount_mem_px_addr_cy<2> (captura/Mcount_mem_px_addr_cy<2>)
+     MUXCY:CI->O           1   0.023   0.000  captura/Mcount_mem_px_addr_cy<3> (captura/Mcount_mem_px_addr_cy<3>)
+     MUXCY:CI->O           1   0.023   0.000  captura/Mcount_mem_px_addr_cy<4> (captura/Mcount_mem_px_addr_cy<4>)
+     MUXCY:CI->O           1   0.023   0.000  captura/Mcount_mem_px_addr_cy<5> (captura/Mcount_mem_px_addr_cy<5>)
+     MUXCY:CI->O           1   0.023   0.000  captura/Mcount_mem_px_addr_cy<6> (captura/Mcount_mem_px_addr_cy<6>)
+     MUXCY:CI->O           1   0.023   0.000  captura/Mcount_mem_px_addr_cy<7> (captura/Mcount_mem_px_addr_cy<7>)
+     MUXCY:CI->O           1   0.023   0.000  captura/Mcount_mem_px_addr_cy<8> (captura/Mcount_mem_px_addr_cy<8>)
+     MUXCY:CI->O           1   0.023   0.000  captura/Mcount_mem_px_addr_cy<9> (captura/Mcount_mem_px_addr_cy<9>)
+     MUXCY:CI->O           1   0.023   0.000  captura/Mcount_mem_px_addr_cy<10> (captura/Mcount_mem_px_addr_cy<10>)
+     MUXCY:CI->O           1   0.023   0.000  captura/Mcount_mem_px_addr_cy<11> (captura/Mcount_mem_px_addr_cy<11>)
+     MUXCY:CI->O           1   0.023   0.000  captura/Mcount_mem_px_addr_cy<12> (captura/Mcount_mem_px_addr_cy<12>)
+     MUXCY:CI->O           0   0.023   0.000  captura/Mcount_mem_px_addr_cy<13> (captura/Mcount_mem_px_addr_cy<13>)
+     XORCY:CI->O           1   0.370   0.000  captura/Mcount_mem_px_addr_xor<14> (captura/Result<14>)
+     FDRE:D                    0.008          captura/mem_px_addr_14
     ----------------------------------------
-    Total                      1.797ns (1.504ns logic, 0.293ns route)
-                                       (83.7% logic, 16.3% route)
+    Total                      1.793ns (1.504ns logic, 0.289ns route)
+                                       (83.9% logic, 16.1% route)
 
 =========================================================================
-Timing constraint: Default OFFSET IN BEFORE for Clock 'captura/m3/f'
-  Total number of paths / destination ports: 3 / 2
+Timing constraint: Default OFFSET IN BEFORE for Clock '_i000004/clkout0'
+  Total number of paths / destination ports: 19 / 19
 -------------------------------------------------------------------------
-Offset:              0.856ns (Levels of Logic = 2)
-  Source:            CAMARA_HREF (PAD)
-  Destination:       captura/m3/DP_RAM_data_in_2 (LATCH)
-  Destination Clock: captura/m3/f rising
+Offset:              1.531ns (Levels of Logic = 2)
+  Source:            rst (PAD)
+  Destination:       VGA640x480/countX_8 (FF)
+  Destination Clock: _i000004/clkout0 rising
 
-  Data Path: CAMARA_HREF to captura/m3/DP_RAM_data_in_2
+  Data Path: rst to VGA640x480/countX_8
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O             1   0.001   0.379  CAMARA_HREF_IBUF (CAMARA_HREF_IBUF)
-     LUT3:I1->O            2   0.097   0.283  captura/m3/GND_8_o_GND_8_o_AND_85_o1 (captura/m3/GND_8_o_GND_8_o_AND_85_o)
-     LDE_1:GE                  0.095          captura/m3/DP_RAM_data_in_2
+     IBUF:I->O            17   0.001   0.768  rst_IBUF (rst_IBUF)
+     LUT6:I0->O            9   0.097   0.316  VGA640x480/Mcount_countX_val1 (VGA640x480/Mcount_countX_val)
+     FDR:R                     0.349          VGA640x480/countX_9
     ----------------------------------------
-    Total                      0.856ns (0.193ns logic, 0.663ns route)
-                                       (22.6% logic, 77.4% route)
+    Total                      1.531ns (0.447ns logic, 1.084ns route)
+                                       (29.2% logic, 70.8% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'CAMARA_PCLK'
+  Total number of paths / destination ports: 74 / 36
+-------------------------------------------------------------------------
+Offset:              1.297ns (Levels of Logic = 2)
+  Source:            CAMARA_VSYNC (PAD)
+  Destination:       captura/countData (FF)
+  Destination Clock: CAMARA_PCLK rising
+
+  Data Path: CAMARA_VSYNC to captura/countData
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             4   0.001   0.570  CAMARA_VSYNC_IBUF (CAMARA_VSYNC_IBUF)
+     LUT4:I0->O            1   0.097   0.279  captura/_n00541 (captura/_n0054)
+     FDR:R                     0.349          captura/countData
+    ----------------------------------------
+    Total                      1.297ns (0.447ns logic, 0.850ns route)
+                                       (34.5% logic, 65.5% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock '_i000004/clkout0'
+  Total number of paths / destination ports: 38 / 10
+-------------------------------------------------------------------------
+Offset:              1.784ns (Levels of Logic = 3)
+  Source:            VGA640x480/countY_6 (FF)
+  Destination:       VGA_Vsync_n (PAD)
+  Source Clock:      _i000004/clkout0 rising
+
+  Data Path: VGA640x480/countY_6 to VGA_Vsync_n
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDRE:C->Q            14   0.361   0.571  VGA640x480/countY_6 (VGA640x480/countY_6)
+     LUT3:I0->O            1   0.097   0.379  VGA640x480/Vsync_n_SW0 (N8)
+     LUT6:I4->O            1   0.097   0.279  VGA640x480/Vsync_n (VGA_Vsync_n_OBUF)
+     OBUF:I->O                 0.000          VGA_Vsync_n_OBUF (VGA_Vsync_n)
+    ----------------------------------------
+    Total                      1.784ns (0.555ns logic, 1.229ns route)
+                                       (31.1% logic, 68.9% route)
+
+=========================================================================
+Timing constraint: Default path analysis
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Delay:               0.354ns (Levels of Logic = 1)
+  Source:            rst (PAD)
+  Destination:       _i000004/mmcm_adv_inst:RST (PAD)
+
+  Data Path: rst to _i000004/mmcm_adv_inst:RST
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            17   0.001   0.353  rst_IBUF (rst_IBUF)
+    MMCME2_ADV:RST             0.000          _i000004/mmcm_adv_inst
+    ----------------------------------------
+    Total                      0.354ns (0.001ns logic, 0.353ns route)
+                                       (0.3% logic, 99.7% route)
 
 =========================================================================
 
@@ -673,59 +632,41 @@ Cross Clock Domains Report:
 --------------------------
 
 Clock to Setup on destination clock CAMARA_PCLK
------------------------------------+---------+---------+---------+---------+
-                                   | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
-Source Clock                       |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
------------------------------------+---------+---------+---------+---------+
-CAMARA_PCLK                        |    1.797|    0.670|    1.058|         |
-captura/m3/GND_8_o_GND_8_o_AND_85_o|         |    0.915|         |         |
-captura/m3/f                       |         |         |    1.263|         |
------------------------------------+---------+---------+---------+---------+
-
-Clock to Setup on destination clock CAMARA_VSYNC
 ---------------+---------+---------+---------+---------+
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-CAMARA_VSYNC   |         |         |    0.648|         |
+CAMARA_PCLK    |    1.793|         |         |         |
 ---------------+---------+---------+---------+---------+
 
-Clock to Setup on destination clock captura/m3/GND_8_o_GND_8_o_AND_85_o
----------------+---------+---------+---------+---------+
-               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
-Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
----------------+---------+---------+---------+---------+
-CAMARA_PCLK    |         |         |    1.033|         |
----------------+---------+---------+---------+---------+
-
-Clock to Setup on destination clock captura/m3/f
----------------+---------+---------+---------+---------+
-               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
-Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
----------------+---------+---------+---------+---------+
-CAMARA_VSYNC   |         |    1.351|         |         |
----------------+---------+---------+---------+---------+
+Clock to Setup on destination clock _i000004/clkout0
+----------------+---------+---------+---------+---------+
+                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock    |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+----------------+---------+---------+---------+---------+
+_i000004/clkout0|    2.219|         |         |         |
+----------------+---------+---------+---------+---------+
 
 Clock to Setup on destination clock clk
 ---------------+---------+---------+---------+---------+
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-CAMARA_PCLK    |         |    1.224|         |         |
+CAMARA_PCLK    |    1.222|         |         |         |
 ---------------+---------+---------+---------+---------+
 
 =========================================================================
 
 
 Total REAL time to Xst completion: 9.00 secs
-Total CPU time to Xst completion: 9.21 secs
+Total CPU time to Xst completion: 8.61 secs
  
 --> 
 
 
-Total memory usage is 499784 kilobytes
+Total memory usage is 499136 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :   90 (   0 filtered)
-Number of infos    :   11 (   0 filtered)
+Number of warnings :   29 (   0 filtered)
+Number of infos    :    8 (   0 filtered)
 
